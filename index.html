@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+    <head>
+        <!-- 基本設定 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+        <meta name="theme-color" content="#000000">
+
+        <!-- 網頁標題與描述 -->
+        <title>QUI 輕量化前端框架</title>
+        <meta name="description" content="(JavaScript Lib) QUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
+
+        <!-- Open Graph 資訊 -->
+        <meta property="og:title" content=">QUI 輕量化前端框架">
+        <meta property="og:description" content="(JavaScript Lib) QUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
+        <meta property="og:image" content="https://opengraph.githubassets.com/1/pardnchiu/QUI">
+        <meta property="og:url" content="https://pardnchiu.github.io/QUI">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="QUI 輕量化前端框架">
+
+        <!-- Twitter 卡片資訊 -->
+        <meta property="twitter:title" content=">QUI 輕量化前端框架">
+        <meta property="twitter:description" content="(JavaScript Lib) QUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
+        <meta property="twitter:image" content="https://opengraph.githubassets.com/1/pardnchiu/QUI">
+        <meta property="twitter:image:alt" content="QUI 輕量化前端框架">
+        <meta property="twitter:url" content="https://pardnchiu.github.io/QUI">
+        <meta property="twitter:site" content="@pardnchiu">
+        <meta property="twitter:card" content="summary_large_image">
+
+        <!-- Mobile App 設定 -->
+        <meta name="mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        <!-- 網站圖標 -->
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-icon-precomposed" href="">
+        <link rel="icon" href="" type="image/x-icon">
+
+        <!-- 驗證標籤 -->
+        <meta name="google-site-verification" content="YQQ2f6AchR8dcb55Az2BYd_mw4TrP0J1RApD-v2v65Y" />
+
+        <!-- 樣式與字型 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" as="style">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <!-- 資源預載: https://cdn.jsdelivr.net -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdmarkdownkit@1.6.0/dist/PDMarkdownKit.js" as="script">
+        <!-- <script src="./dist/QUI.js" copyright="Pardn Ltd"></script> -->
+        <!-- <script src="./src/QUI.js" copyright="Pardn Ltd"></script> -->
+
+        <!-- 資源預載: https://pardnchiu.github.io -->
+        <!-- <link rel="preconnect" href="https://pardnchiu.github.io"> -->
+        <!-- <link rel="preload" href="https://pardnchiu.github.io/css/index.css" as="style"> -->
+        <!-- <link rel="stylesheet" href="https://pardnchiu.github.io/css/index.css"> -->
+
+        <!-- 本地資源 -->
+        <!-- <script type="module" src="./static/js/index.js"></script> -->
+    </head>
+
+    <body id="app" class="md">
+        <h1 :if="heading == 1">{{ title }} {{ heading }}</h1>
+        <h2 :else-if="isH2">{{ title }} {{ heading }}</h2>
+        <h3 :else-if="heading == 3">{{ title }} {{ heading }}</h3>
+        <h4 :else>{{ title }} {{ heading }}</h4>
+        <ul>
+            <li :for="(item, index) in ary" :id="item" :index="index">{{ item }} {{ CALC(index + 1) }}</li>
+        </ul>
+        <ul>
+            <li :for="(key, val) in obj">
+                {{ key }}: {{ val.name }}
+                <ul>
+                    <li :for="item in val.ary">
+                        {{ item.name }}
+                        <ul>
+                            <li :for="(item1, index1) in item.ary1">
+                                {{ CALC(index1 + 1) }}. {{ item1.name }} - ${{ item1.price }}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>Total: {{ LENGTH(array) }}</p>
+        <p>calc: {{ CALC(num * 10) }}</p>
+        <p>{{ UPPER(test1) }} {{ LOWER(test2) }}</p>
+        <p>{{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</p>
+        <script type="module">
+            import { QUI } from "./dist/QUI.module.js"
+            const app = new QUI({
+                id: "app",
+                data: {
+                    heading: "test",
+                    isH2: null,
+                    title: "test",
+                    ary: ["test1", "test2", "test3"],
+                    array: [1, 2, 3, 4],
+                    num: 1,
+                    test1: "upper",
+                    test2: "LOWER",
+                    now: Math.floor(Date.now() / 1000),
+                    obj: {
+                        food: {
+                            name: "Food",
+                            ary: [
+                                {
+                                    name: 'Snacks',
+                                    ary1: [
+                                        { name: 'Potato Chips', price: 10 },
+                                        { name: 'Chocolate', price: 8 }
+                                    ]
+                                },
+                                {
+                                    name: 'Beverages',
+                                    ary1: [
+                                        { name: 'Juice', price: 5 },
+                                        { name: 'Tea', price: 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        home: {
+                            name: 'Home',
+                            ary: [
+                                {
+                                    name: 'Furniture',
+                                    ary1: [
+                                        { name: 'Sofa', price: 300 },
+                                        { name: 'Table', price: 150 }
+                                    ]
+                                },
+                                {
+                                    name: 'Decorations',
+                                    ary1: [
+                                        { name: 'Picture Frame', price: 20 },
+                                        { name: 'Vase', price: 15 }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                next: _ => {
+
+                }
+            });
+        </script>
+    </body>
+
+</html>

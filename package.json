@@ -1,0 +1,38 @@
+{
+    "name": "pdquickui",
+    "version": "0.1.0",
+    "description": "PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic.",
+    "main": "dist/PDQuickUI.js",
+    "module": "dist/PDQuickUI.module.js",
+    "types": "src/interface.ts",
+    "scripts": {
+        "minify": "npx terser src/*.js -c -m -o dist/PDQuickUI.js --config-file terser.config.json --name-cache terser.cache.json && npx terser src/*.js -c -m -o dist/PDQuickUI.module.js --config-file terser.config.json --name-cache terser.cache.json && echo 'export const QUI = window.QUI;' >> dist/PDQuickUI.module.js",
+        "minify-w": "chokidar 'src/PDQuickUI.js' -c 'npm run minify'"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "static",
+        "index.html",
+        "src/interface.ts",
+        "LICENSE",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pardnchiu/PDQuickUI.git"
+    },
+    "keywords": [
+        "javascript-library",
+        "front-end-framework"
+    ],
+    "author": "邱敬幃 Pardn Chiu",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/pardnchiu/PDQuickUI/issues",
+        "email": "dev@pardn.io"
+    },
+    "homepage": "https://github.com/pardnchiu/PDQuickUI#readme"
+}
