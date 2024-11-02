@@ -10,23 +10,23 @@
         <meta name="theme-color" content="#000000">
 
         <!-- 網頁標題與描述 -->
-        <title>QUI 輕量化前端框架</title>
-        <meta name="description" content="(JavaScript Lib) QUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
+        <title>PDQuickUI 輕量化前端框架</title>
+        <meta name="description" content="(JavaScript Lib) PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
 
         <!-- Open Graph 資訊 -->
-        <meta property="og:title" content=">QUI 輕量化前端框架">
-        <meta property="og:description" content="(JavaScript Lib) QUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
-        <meta property="og:image" content="https://opengraph.githubassets.com/1/pardnchiu/QUI">
-        <meta property="og:url" content="https://pardnchiu.github.io/QUI">
+        <meta property="og:title" content=">PDQuickUI 輕量化前端框架">
+        <meta property="og:description" content="(JavaScript Lib) PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
+        <meta property="og:image" content="https://opengraph.githubassets.com/1/pardnchiu/PDQuickUI">
+        <meta property="og:url" content="https://pardnchiu.github.io/PDQuickUI">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="QUI 輕量化前端框架">
+        <meta property="og:site_name" content="PDQuickUI 輕量化前端框架">
 
         <!-- Twitter 卡片資訊 -->
-        <meta property="twitter:title" content=">QUI 輕量化前端框架">
-        <meta property="twitter:description" content="(JavaScript Lib) QUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
-        <meta property="twitter:image" content="https://opengraph.githubassets.com/1/pardnchiu/QUI">
-        <meta property="twitter:image:alt" content="QUI 輕量化前端框架">
-        <meta property="twitter:url" content="https://pardnchiu.github.io/QUI">
+        <meta property="twitter:title" content=">PDQuickUI 輕量化前端框架">
+        <meta property="twitter:description" content="(JavaScript Lib) PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic. 邱敬幃 Pardn Chiu.">
+        <meta property="twitter:image" content="https://opengraph.githubassets.com/1/pardnchiu/PDQuickUI">
+        <meta property="twitter:image:alt" content="PDQuickUI 輕量化前端框架">
+        <meta property="twitter:url" content="https://pardnchiu.github.io/PDQuickUI">
         <meta property="twitter:site" content="@pardnchiu">
         <meta property="twitter:card" content="summary_large_image">
 
@@ -52,8 +52,8 @@
         <!-- 資源預載: https://cdn.jsdelivr.net -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdmarkdownkit@1.6.0/dist/PDMarkdownKit.js" as="script">
-        <!-- <script src="./dist/QUI.js" copyright="Pardn Ltd"></script> -->
-        <!-- <script src="./src/QUI.js" copyright="Pardn Ltd"></script> -->
+        <!-- <script src="./dist/PDQuickUI.js" copyright="Pardn Ltd"></script> -->
+        <!-- <script src="./src/PDQuickUI.js" copyright="Pardn Ltd"></script> -->
 
         <!-- 資源預載: https://pardnchiu.github.io -->
         <!-- <link rel="preconnect" href="https://pardnchiu.github.io"> -->
@@ -64,16 +64,14 @@
         <!-- <script type="module" src="./static/js/index.js"></script> -->
     </head>
 
-    <body id="app" class="md">
-        <h1 :if="heading == 1">{{ title }} {{ heading }}</h1>
-        <h2 :else-if="isH2">{{ title }} {{ heading }}</h2>
-        <h3 :else-if="heading == 3">{{ title }} {{ heading }}</h3>
-        <h4 :else>{{ title }} {{ heading }}</h4>
+    <body id="app" class="dom-temp">
+        <p :html="html" :bg-color="#000" :color="#ff0000">adfasdf</p>
+        <input type="text" :model="title">
+        <temp :path="./static/path/test.html"></temp>
+        <temp :path="./static/path/test2.html"></temp>
+        <temp-svg :src="./static/image/404.svg"></temp-svg>
         <ul>
-            <li :for="(item, index) in ary" :id="item" :index="index">{{ item }} {{ CALC(index + 1) }}</li>
-        </ul>
-        <ul>
-            <li :for="(key, val) in obj">
+            <li :for="(key, val) in obj" :@click="val.click">
                 {{ key }}: {{ val.name }}
                 <ul>
                     <li :for="item in val.ary">
@@ -87,17 +85,29 @@
                 </ul>
             </li>
         </ul>
-        <p>Total: {{ LENGTH(array) }}</p>
+        <p @click="click">Total: {{ LENGTH(array) }}</p>
         <p>calc: {{ CALC(num * 10) }}</p>
         <p>{{ UPPER(test1) }} {{ LOWER(test2) }}</p>
         <p>{{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</p>
+        <h1 :id="title" :if="heading == 1">{{ title }} 1</h1>
+        <h2 :else-if="isH2">{{ title }} 2</h2>
+        <h3 :else-if="heading == 3">{{ title }} 3</h3>
+        <h4 :else>{{ title }} 4</h4>
+        <br>
+        {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}
+        <ul>
+            <li :for="(item, index) in ary" :id="item" :index="index">{{ item }} {{ CALC(index + 1) }}</li>
+        </ul>
+        <img :lazyload="src" alt="">
         <script type="module">
-            import { QUI } from "./dist/QUI.module.js"
+            import { QUI } from "./dist/PDQuickUI.module.js"
+
             const app = new QUI({
                 id: "app",
                 data: {
-                    heading: "test",
+                    heading: 1,
                     isH2: null,
+                    html: "<b>test</b>",
                     title: "test",
                     ary: ["test1", "test2", "test3"],
                     array: [1, 2, 3, 4],
@@ -105,9 +115,32 @@
                     test1: "upper",
                     test2: "LOWER",
                     now: Math.floor(Date.now() / 1000),
+                    string: "test",
+                    src: "https://img.shields.io/badge/read-English%20Version-ffffff",
                     obj: {
+                        home: {
+                            name: 'Home',
+                            click: "click1",
+                            ary: [
+                                {
+                                    name: 'Furniture',
+                                    ary1: [
+                                        { name: 'Sofa', price: 300 },
+                                        { name: 'Table', price: 150 }
+                                    ]
+                                },
+                                {
+                                    name: 'Decorations',
+                                    ary1: [
+                                        { name: 'Picture Frame', price: 20 },
+                                        { name: 'Vase', price: 15 }
+                                    ]
+                                }
+                            ]
+                        },
                         food: {
                             name: "Food",
+                            click: "click2",
                             ary: [
                                 {
                                     name: 'Snacks',
@@ -125,29 +158,46 @@
                                 }
                             ]
                         },
-                        home: {
-                            name: 'Home',
-                            ary: [
-                                {
-                                    name: 'Furniture',
-                                    ary1: [
-                                        { name: 'Sofa', price: 300 },
-                                        { name: 'Table', price: 150 }
-                                    ]
-                                },
-                                {
-                                    name: 'Decorations',
-                                    ary1: [
-                                        { name: 'Picture Frame', price: 20 },
-                                        { name: 'Vase', price: 15 }
-                                    ]
-                                }
-                            ]
-                        }
                     }
                 },
-                next: _ => {
+                event: {
+                    click: _ => {
+                        alert("good");
+                    },
+                    click1: _ => {
+                        alert("good1");
+                    },
+                    click2: _ => {
+                        alert("good2");
+                    },
+                    input: _ => {
+                        console.log(app.data)
+                    }
+                },
+                before_render: _ => {
+                    console.log("準備渲染")
+                    // return false;
+                },
+                rendered: _ => {
+                    // setTimeout(_ => {
 
+                    //     app.data.heading = 3
+                    // }, 1000)
+                    // setTimeout(_ => {
+
+                    //     app.data.isH2 = true
+                    //     app.data.obj.home.ary[0].name = "Test"
+
+                    // }, 2000)
+                    console.log("已渲染")
+                },
+                before_update: _ => {
+                    console.log("準備更新")
+                    // alert(true)
+                    // return false;
+                },
+                updated: _ => {
+                    console.log("已更新")
                 }
             });
         </script>
