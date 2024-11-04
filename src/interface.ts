@@ -2,14 +2,6 @@ interface Window {
     QUI: any;
 };
 
-interface vDOM {
-    tag: string;
-    props: { [key: string]: string };
-    children: (vDOM | string)[];
-    data: any;
-    dismiss: boolean;
-};
-
 type Patch =
     | { type: "CREATE"; vdom: vDOM | string; index: number[] }
     | { type: "APPEND"; vdom: vDOM | string; index: number[] }

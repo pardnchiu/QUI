@@ -65,10 +65,14 @@
     </head>
 
     <body id="app" class="dom-temp">
-        <h1 :id="title" :if="heading == 1">{{ title }} 1</h1>
-        <h2 :else-if="isH2">{{ title }} 2</h2>
-        <h3 :else-if="heading == 3">{{ title }} 3</h3>
-        <h4 :else>{{ title }} 4</h4>
+        <h1 :id="title" :if="heading == 1">{{ title }} 1
+            {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</h1>
+        <h2 :else-if="isH2">{{ title }} 2
+            {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</h2>
+        <h3 :else-if="heading == 3">{{ title }} 3
+            {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</h3>
+        <h4 :else>{{ title }} 4
+            {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</h4>
         <br>
         <!-- <p :html="html" :bg-color="#000" :color="#ff0000">adfasdf</p> -->
         <!-- <input type="text" :model="title"> -->
@@ -78,22 +82,25 @@
         <ul>
             <li :for="(key, val) in obj" :@click="val.click">
                 {{ key }}: {{ val.name }}
+                {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}
                 <ul>
                     <li :for="item in val.ary">
                         {{ item.name }}
+                        {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}
                         <ul>
                             <li :for="(item1, index1) in item.ary1">
                                 {{ CALC(index1 + 1) }}. {{ item1.name }} - ${{ item1.price }}
+                                {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}
                             </li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
-        <br>
-        {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}
         <ul>
-            <li :for="(item, index) in ary" :id="item" :index="index">{{ item }} {{ CALC(index + 1) }}</li>
+            <li :for="(item, index) in ary" :id="item" :index="index">{{ item }} {{ CALC(index + 1) }}
+                {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</li>
+            {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}
         </ul>
         <img :lazyload="src" alt="">
         <p @click="click">Total: {{ LENGTH(array) }}</p>
@@ -175,30 +182,32 @@
                         console.log(app.data)
                     }
                 },
-                before_render: _ => {
-                    console.log("準備渲染")
-                    // return false;
-                },
-                rendered: _ => {
-                    // setTimeout(_ => {
+                lifecycle: {
+                    before_render: _ => {
+                        console.log("準備渲染")
+                        // return false;
+                    },
+                    rendered: _ => {
+                        // setTimeout(_ => {
 
-                    //     app.data.heading = 3
-                    // }, 1000)
-                    // setTimeout(_ => {
+                        //     app.data.heading = 3
+                        // }, 1000)
+                        // setTimeout(_ => {
 
-                    //     app.data.isH2 = true
-                    //     app.data.obj.home.ary[0].name = "Test"
+                        //     app.data.isH2 = true
+                        //     app.data.obj.home.ary[0].name = "Test"
 
-                    // }, 2000)
-                    console.log("已渲染")
-                },
-                before_update: _ => {
-                    console.log("準備更新")
-                    // alert(true)
-                    // return false;
-                },
-                updated: _ => {
-                    console.log("已更新")
+                        // }, 2000)
+                        console.log("已渲染")
+                    },
+                    before_update: _ => {
+                        console.log("準備更新")
+                        // alert(true)
+                        // return false;
+                    },
+                    updated: _ => {
+                        console.log("已更新")
+                    }
                 }
             });
         </script>
