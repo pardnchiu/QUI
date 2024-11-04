@@ -2,60 +2,60 @@
 
 ![](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) ![](https://img.shields.io/github/size/pardnchiu/PDQuickUI/dist%2FPDQuickUI.js)<br>
 [![](https://img.shields.io/github/v/release/pardnchiu/PDQuickUI)](https://github.com/pardnchiu/PDQuickUI) [![](https://img.shields.io/npm/v/pdquickui)](https://www.npmjs.com/package/pdquickui) ![](https://img.shields.io/github/license/pardnchiu/PDQuickUI)<br>
-[![](https://img.shields.io/badge/read-English%20Version-ffffff)](https://github.com/pardnchiu/PDQuickUI/blob/main/README.en.md)
+[![](https://img.shields.io/badge/read-English%20Version-ffffff)](https://github.com/pardnchiu/PDQuickUI/blob/main/README.md)
 
-`PDQuickUI` 是從 [PDRenderKit](https://github.com/pardnchiu/PDRenderKit) 中獨立出來的前端渲染框架，專注於強化前端框架功能。<br>
-透過引入虛擬 DOM 重寫渲染邏輯，提升渲染效能，並實現更高效的數據監聽和自動更新。<br>
+`PDQuickUI` is a front-end rendering framework derived from [PDRenderKit](https://github.com/pardnchiu/PDRenderKit), focusing on enhancing front-end framework features.<br>
+By integrating a virtual DOM, it rewrites the rendering logic to improve rendering efficiency, enabling faster data observation and automatic updates.<br>
 
-本專案移除了 `PDRenderKit` 中針對 `prototype` 的擴展，確保兼容性與效能，適合用於複雜的應用場景。<br>
-提供 `module` 和非 `module` 版本，授權從 `PDRenderKit` 的 `GPL-3.0` 更改為 `MIT`。<br>
+This project removes the `prototype` extensions from `PDRenderKit` to ensure compatibility and performance, making it suitable for complex applications.<br>
+It provides both `module` and non-`module` versions and changes the license from `GPL-3.0` in `PDRenderKit` to `MIT`.
 
-## 特點
+## Features
 
-- **清晰的架構**：UI 和資料邏輯分離，維護方便。
-- **代碼簡潔**：減少重複代碼，提升可讀性。
-- **自動渲染**：監控資料變動並自動更新，減少手動操作。
-- **輕量化**：功能完整的同時，文件大小控制在 `20kb` 以內。
+- **Clear Architecture**: Separates UI from data logic, making it easier to maintain.
+- **Code Simplicity**: Reduces redundant code and enhances readability.
+- **Automatic Rendering**: Monitors data changes and updates automatically, minimizing manual operations.
+- **Lightweight**: Maintains full functionality within a file size of less than `20kb`.
 
-## 安裝方式
+## Installation
 
-- **從 npm 安裝**
+- **Install from npm**
     ```bash
     npm i pdquickui
     ```
-- **從 CDN 引入**
-    - **引入 `PDQuickUI` 套件**
+- **Include from CDN**
+    - **Directly include `PDQuickUI`**
         ```html
         <script src="https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.js"></script>
         ```
-    - **Module 版本**
+    - **Module Version**
         ```javascript
         import { QUI } from "https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.module.js";
         ```
 
-## 功能介紹
-自動渲染：加載自動渲染在檢測到資料變更時自動重新渲染。
+## Features Overview
+Automatic Rendering: Automatically reloads when data changes are detected.
 
 <details>
-<summary>屬性概覽</summary>
+<summary>Attributes Overview</summary>
 
-| 屬性 | 描述 |
+| Attribute | Description |
 | --- | --- |
-| `{{value}}` | 將文字插入到 HTML 標籤中，並隨資料變更自動更新。 |
-| `:path` | 搭配 `temp` 標籤，用於將外部文件中的 HTML 片段加載到當前頁面。 |
-| `:html` | 使用文本替換元素的 `innerHTML`。 |
-| `:for` | 支援 `item in items`、`(item, index) in items`、`(key, value) in object` 格式，遍歷資料集合，生成對應的 HTML 元素。 |
-| `:if`<br>`:else-if`<br>`:elif`<br>`:else` | 根據條件顯示或隱藏元素，實現分支邏輯。 |
-| `:model` | 將資料綁定到表單元素（如 `input`），當輸入變更時自動更新資料。 |
-| `:hide` | 根據特定條件隱藏元素。 |
-| `:[attr]` | 設定元素屬性，例如 `ID`、`class`、圖像來源等。<br>範例：`:id`、`:class`、`:src`、`:alt`、`:href`... |
-| `@[event]` | 添加事件監聽器，當事件觸發時執行指定操作。<br>範例：`@click`、`@input`、`@mousedown`... |
-| `:@[event]` | 用於 `:for` 內單個元素的事件處理，允許每個元素設置不同的事件處理。 |
+| `{{value}}` | Inserts text into an HTML tag and updates automatically when data changes. |
+| `:path` | Used with the `temp` tag to load an external HTML fragment into the current page. |
+| `:html` | Replaces an element’s `innerHTML` with specified text. |
+| `:for` | Supports formats like `item in items`, `(item, index) in items`, `(key, value) in object`. Iterates over data collections to generate corresponding HTML elements. |
+| `:if`<br>`:else-if`<br>`:elif`<br>`:else` | Displays or hides elements based on specified conditions, enabling branching logic. |
+| `:model` | Binds data to form elements (e.g., `input`), updating data automatically when input changes. |
+| `:hide` | Hides elements based on specific conditions. |
+| `:[attr]` | Sets element attributes, such as `ID`, `class`, image source, etc.<br>Examples: `:id`/`:class`/`:src`/`:alt`/`:href`... |
+| `@[event]` | Adds event listeners that trigger specified actions upon activation.<br>Examples: `@click`/`@input`/`@mousedown`... |
+| `:@[event]` | Sets event handlers for individual elements within loops, allowing different handlers for each element. |
 
 </details>
 
 <details>
-<summary>屬性 <code>{{value}}</code></summary>
+<summary>Attribute <code>{{value}}</code></summary>
 
 - index.html
     ```HTML
@@ -76,11 +76,10 @@
     </body>
     ```
 
-
 </details>
 
 <details>
-<summary>屬性 <code>:html</code></summary>
+<summary>Attribute <code>:html</code></summary>
 
 - index.html
     ```HTML
@@ -103,13 +102,12 @@
     </body>
     ```
 
-
 </details>
 
 <details>
-<summary>屬性 <code>:path</code></summary>
+<summary>Attribute <code>:path</code></summary>
 
-*確保測試時已禁用瀏覽器中的本地文件限制或使用實時服務器。*
+*Ensure to disable local file restrictions in your browser or use a live server when testing.*
 
 - test.html
     ```html
@@ -130,7 +128,7 @@
 - Result
     ```html
     <body id="app">
-        <!-- 直接插入 PATH 內容 -->
+        <!-- Directly insert content from PATH -->
         <h1>path heading</h1>
         <p>path content</p>
     </body>
@@ -139,7 +137,7 @@
 </details>
 
 <details>
-<summary>屬性 <code>:for</code></summary>
+<summary>Attribute <code>:for</code></summary>
 
 - index.html
     ```html
@@ -169,7 +167,7 @@
 </details>
 
 <details>
-<summary>多層 <code>:for</code> 嵌套</summary>
+<summary>Multi-layer <code>:for</code> Nesting</summary>
 
 - index.html
     ```html
@@ -281,7 +279,7 @@
 </details>
 
 <details>
-<summary>屬性 <code>:if</code>/<code>:else-if</code>/<code>:elif</code>/<code>:else</code></summary>
+<summary>Attribute <code>:if</code>/<code>:else-if</code>/<code>:elif</code>/<code>:else</code></summary>
 
 - index.html
     ```html
@@ -330,7 +328,7 @@
 </details>
 
 <details>
-<summary>屬性 <code>:model</code></summary>
+<summary>Attribute <code>:model</code></summary>
 
 - index.html
     ```html
@@ -356,7 +354,7 @@
 </details>
 
 <details>
-<summary>屬性 <code>@[event]</code></summary>
+<summary>Attribute <code>@[event]</code></summary>
 
 - index.html
     ```html
@@ -378,14 +376,14 @@
 </details>
 
 <details>
-<summary>快速設置 CSS</summary>
+<summary>Quick CSS Setup</summary>
 
-`:padding`, `:margin`, `:border`, `:border-radius`, `:outline`, `:box-sahdow`, `:bg-image`, `:bg-attachment`, `:bg-blend-mode`, `:bg-clip`, `:bg-origin`, `:bg-position`, `:bg-position-x`, `:bg-position-y`, `:bg-repeat`, `:bg-size`, `:bg-color`, `:color`
+`:padding`, `:margin`, `:border`, `:border-radius`, `:outline`, `:box-shadow`, `:bg-image`, `:bg-attachment`, `:bg-blend-mode`, `:bg-clip`, `:bg-origin`, `:bg-position`, `:bg-position-x`, `:bg-position-y`, `:bg-repeat`, `:bg-size`, `:bg-color`, `:color`
 
 </details>
 
 <details>
-<summary>可用函式</summary>
+<summary>Available Functions</summary>
 
 - `LENGTH()`:
     - index.html
@@ -476,23 +474,23 @@
 </details>
 
 <details>
-<summary>資料獲取</summary>
+<summary>Data Retrieval</summary>
 
 ```html
 <body id="app">
     <input type="text" :model="test">
-    <button @click="get">測試</button>
+    <button @click="get">Test</button>
 </body>
 <script>
     const app = new QUI({
         id: "app",
         data: {
-            // 給 input 綁定的值
+            // Value bound to input
             test: 123
         },
         event: {
             get: _ => {
-                // 點擊時彈出內容為 test 值的通知
+                // Shows a notification with the value of test when clicked
                 alert(app.data.test);
             }
         }
@@ -503,7 +501,7 @@
 </details>
 
 <details>
-<summary>生命週期</summary>
+<summary>Lifecycle Hooks</summary>
 
 ```html
 <body id="app"></body>
@@ -511,18 +509,18 @@
     const app = new QUI({
         id: "app",
         before_mount: function () {
-            // 停止渲染
-            // retuen false 
+            // Stops rendering
+            // return false 
         },
         mounted: function () {
-            console.log("已掛載");
+            console.log("Mounted");
         },
         before_update: function () {
-            // 停止更新
-            // retuen false 
+            // Stops updating
+            // return false 
         },
         updated: function () {
-            console.log("已更新");
+            console.log("Updated");
         },
     });
 </script>
@@ -531,7 +529,7 @@
 </details>
 
 <details>
-<summary>可選設定</summary>
+<summary>Optional Settings</summary>
 
 - test.svg
     ```XML
@@ -556,8 +554,8 @@
                 image: "test.jpg"
             },
             option: {
-                lazyload: true, // 圖片延遲加載: true|false (預設: true)
-                svg: true       // SVG 檔案轉換: true|false (預設: true)
+                lazyload: true, // Image lazy loading: true|false (default: true)
+                svg: true       // SVG conversion: true|false (default: true)
             }
         });
     </script>
@@ -565,19 +563,19 @@
 - result
     ```html
     <body id="app">
-        <!-- 直接插入 SVG 檔案 -->
+        <!-- Directly insert SVG content -->
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="18" y1="6" x2="6" y2="18" stroke="black" stroke-width="2" stroke-linecap="round">
             <line x1="6" y1="6" x2="18" y2="18" stroke="black" stroke-width="2" stroke-linecap="round">
         </svg>
-        <!-- 會在元素進入畫面時讀取 -->
+        <!-- Loads image when element enters viewport -->
         <img src="test.jpg">
     </body>
     ```
 
 </details>
 
-## 開發者
+## Creator
 
 <img src="https://avatars.githubusercontent.com/u/25631760" align="left" width="96" height="96" style="margin-right: 0.5rem;" />
 
@@ -585,11 +583,14 @@
 
 [![](https://pardn.io/image/mail.svg)](mailto:dev@pardn.io) [![](https://skillicons.dev/icons?i=linkedin)](https://linkedin.com/in/pardnchiu) 
 
-## 授權條款
+## License
 
-本專案依據 [MIT](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE) 授權使用。
+This project is licensed under the [MIT License](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE).
 
 ***
 
 ©️ 2024 [邱敬幃 Pardn Chiu](https://www.linkedin.com/in/pardnchiu)
 
+***
+
+Translate by ChatGPT 4o.
