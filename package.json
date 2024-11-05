@@ -1,6 +1,6 @@
 {
     "name": "pdquickui",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic.",
     "main": "dist/PDQuickUI.js",
     "module": "dist/PDQuickUI.module.js",

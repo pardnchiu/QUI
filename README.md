@@ -5,7 +5,7 @@
 [![](https://img.shields.io/badge/read-English%20Version-ffffff)](https://github.com/pardnchiu/PDQuickUI/blob/main/README.en.md)
 
 `PDQuickUI` 是從 [PDRenderKit](https://github.com/pardnchiu/PDRenderKit) 中獨立出來的前端渲染框架，專注於強化前端框架功能。<br>
-透過引入虛擬 DOM 重寫渲染邏輯，提升渲染效能，並實現更高效的數據監聽和自動更新。<br>
+透過引入虛擬 DOM 概念重寫渲染邏輯，提升渲染效能，並實現更高效的數據監聽和自動更新。<br>
 
 本專案移除了 `PDRenderKit` 中針對 `prototype` 的擴展，確保兼容性與效能，適合用於複雜的應用場景。<br>
 提供 `module` 和非 `module` 版本，授權從 `PDRenderKit` 的 `GPL-3.0` 更改為 `MIT`。<br>
@@ -50,7 +50,6 @@
 | `:hide` | 根據特定條件隱藏元素。 |
 | `:[attr]` | 設定元素屬性，例如 `ID`、`class`、圖像來源等。<br>範例：`:id`、`:class`、`:src`、`:alt`、`:href`... |
 | `@[event]` | 添加事件監聽器，當事件觸發時執行指定操作。<br>範例：`@click`、`@input`、`@mousedown`... |
-| `:@[event]` | 用於 `:for` 內單個元素的事件處理，允許每個元素設置不同的事件處理。 |
 
 </details>
 
@@ -461,7 +460,7 @@
             const app = new QUI({
                 id: "app",
                 data: {
-                    now: $Math.floor(Date.now() / 1000)
+                    now: Math.floor(Date.now() / 1000)
                 }
             });
         </script>
@@ -503,6 +502,42 @@
 </details>
 
 <details>
+<summary>模板渲染</summary>
+
+- index.html
+    ```HTML
+    <body id="app"></body>
+    <script>
+        const test = new QUI({
+            id: "app",
+            data: {
+                hint: "hint 123",
+                title: "test 123"
+            },
+            render: () => {
+                return `
+                    "{{ hint }}",
+                    h1 {
+                        style: "background: red;", 
+                        children: [ 
+                            "{{ title }}"
+                        ]
+                    }`
+            }
+        })
+    </script>
+    ```
+- Result
+    ```HTML
+    <body id="app">
+        hint 123
+        <h1 style="background: red;">test 123</h1>
+    </body>
+```
+
+</details>
+
+<details>
 <summary>生命週期</summary>
 
 ```html
@@ -510,20 +545,29 @@
 <script>
     const app = new QUI({
         id: "app",
-        before_mount: function () {
-            // 停止渲染
-            // retuen false 
-        },
-        mounted: function () {
-            console.log("已掛載");
-        },
-        before_update: function () {
-            // 停止更新
-            // retuen false 
-        },
-        updated: function () {
-            console.log("已更新");
-        },
+        when: {
+            before_mount: function () {
+                // 停止渲染
+                // retuen false 
+            },
+            mounted: function () {
+                console.log("已掛載");
+            },
+            before_update: function () {
+                // 停止更新
+                // retuen false 
+            },
+            updated: function () {
+                console.log("已更新");
+            },
+            before_destroy: function () {
+                // 停止銷毀
+                // retuen false 
+            },
+            destroyed: function () {
+                console.log("已銷毀");
+            }
+        }
     });
 </script>
 ```

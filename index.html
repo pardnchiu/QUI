@@ -65,6 +65,7 @@
     </head>
 
     <body id="app" class="dom-temp">
+        <section id="test"></section>
         <h1 :id="title" :if="heading == 1">{{ title }} 1
             {{ string }} {{ CALC(num * 10) }} {{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</h1>
         <h2 :else-if="isH2">{{ title }} 2
@@ -109,6 +110,29 @@
         <p>{{ DATE(now, YYYY-MM-DD hh:mm:ss) }}</p>
         <script type="module">
             import { QUI } from "./dist/PDQuickUI.module.js"
+
+            const test = new QUI({
+                id: "test",
+                data: {
+                    test: "test 123"
+                },
+                render: () => {
+                    return `
+                        "{{ test }}",
+                        div#main-card.primary.highlighted {
+                            style: "background: red;", 
+                            children: [ 
+                                "test",
+                                header.title { 
+                                    data-role: "title" 
+                                }, 
+                                section.content { 
+                                    style: "padding: 20px;" 
+                                } 
+                            ]
+                        }`
+                }
+            })
 
             const app = new QUI({
                 id: "app",
@@ -182,12 +206,27 @@
                         console.log(app.data)
                     }
                 },
-                lifecycle: {
+                when: {
                     before_render: _ => {
                         console.log("準備渲染")
                         // return false;
                     },
                     rendered: _ => {
+                        // const html = app.parseToHTML(`
+                        // div#main-card.primary.highlighted { 
+                        //     style: "background: red;", 
+                        //     children: [ 
+                        //         "test",
+                        //         header.title { 
+                        //             data-role: "title" 
+                        //         }, 
+                        //         section.content { 
+                        //             style: "padding: 20px;" 
+                        //         } 
+                        //     ]
+                        // },
+                        // "test"`);
+                        // console.log(html)
                         // setTimeout(_ => {
 
                         //     app.data.heading = 3
