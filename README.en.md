@@ -459,7 +459,7 @@ Automatic Rendering: Automatically reloads when data changes are detected.
             const app = new QUI({
                 id: "app",
                 data: {
-                    now: $Math.floor(Date.now() / 1000)
+                    now: Math.floor(Date.now() / 1000)
                 }
             });
         </script>
@@ -497,6 +497,42 @@ Automatic Rendering: Automatically reloads when data changes are detected.
     });
 </script>
 ```
+
+</details>
+
+<details>
+<summary>Model Render</summary>
+
+- index.html
+    ```HTML
+    <body id="app"></body>
+    <script>
+        const test = new QUI({
+            id: "app",
+            data: {
+                hint: "hint 123",
+                title: "test 123"
+            },
+            render: () => {
+                return `
+                    "{{ hint }}",
+                    h1 {
+                        style: "background: red;", 
+                        children: [ 
+                            "{{ title }}"
+                        ]
+                    }`
+            }
+        })
+    </script>
+    ```
+- Result
+    ```HTML
+    <body id="app">
+        hint 123
+        <h1 style="background: red;">test 123</h1>
+    </body>
+    ```
 
 </details>
 
