@@ -1,0 +1,96 @@
+*[\:animation="fade-in"],
+*[animation="fade-in"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+*[\:animation="fade-in"].show,
+*[animation="fade-in"].show {
+    opacity: 1;
+}
+
+*[\:animation="expand"],
+*[animation="expand"] {
+    min-height: 0;
+    height: 0;
+    overflow: hidden;
+    transition: min-height 0.3s ease-in 0s;
+}
+
+*[\:animation="expand"].show,
+*[animation="expand"].show {
+    opacity: 1;
+}
+
+*[\:mask="1=true"],
+*[mask="true"],
+*[\:mask="1"],
+*[mask="1"] {
+    position: relative;
+}
+
+*[\:mask="1=true"]::after,
+*[mask="true"]::after,
+*[\:mask="1"]::after,
+*[mask="1"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #e0e0e0 25%, #f0f0f0, #e0e0e0 75%);
+    /* 使用灰色漸層 */
+    background-size: 200% 100%;
+    /* 背景尺寸兩倍寬度 */
+    animation: loading-animation 1.5s infinite alternate;
+    /* 來回移動動畫 */
+    z-index: 10;
+    transition: 0.3s;
+}
+
+*[\:mask="1=true"]::after,
+*[mask="true"]::after,
+*[\:mask="1"].show::after,
+*[mask="1"].show::after {
+    opacity: 0;
+}
+
+@keyframes loading-animation {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+img[lazyload]:not([lazyload=""]) {
+    width: 1rem;
+    height: 1rem;
+    border: 0.25rem solid rgba(0, 0, 0, 0.1);
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+img[src]:not([src=""]) {
+    width: unset;
+    height: unset;
+    border: 0 solid transparent;
+    border-radius: 0;
+    animation: none;
+    transition: width 0.3s;
+    transition: height 0.3s;
+}

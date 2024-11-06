@@ -48,6 +48,8 @@ Automatic Rendering: Automatically reloads when data changes are detected.
 | `:if`<br>`:else-if`<br>`:elif`<br>`:else` | Displays or hides elements based on specified conditions, enabling branching logic. |
 | `:model` | Binds data to form elements (e.g., `input`), updating data automatically when input changes. |
 | `:hide` | Hides elements based on specific conditions. |
+| `:animation` | Specifies transition effects for elements, such as `fade-in` or `expand`, to enhance user experience. |
+| `:mask` | Controls block loading animations, supporting `true|false|1|0`, to enhance dynamic visual effects during loading. |
 | `:[attr]` | Sets element attributes, such as `ID`, `class`, image source, etc.<br>Examples: `:id`/`:class`/`:src`/`:alt`/`:href`... |
 | `@[event]` | Adds event listeners that trigger specified actions upon activation.<br>Examples: `@click`/`@input`/`@mousedown`... |
 | `:@[event]` | Sets event handlers for individual elements within loops, allowing different handlers for each element. |

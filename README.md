@@ -1,4 +1,4 @@
-# PDQuickUI (JavaScript Library)
+# PDQuickUI
 
 ![](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) ![](https://img.shields.io/github/size/pardnchiu/PDQuickUI/dist%2FPDQuickUI.js)<br>
 [![](https://img.shields.io/github/v/release/pardnchiu/PDQuickUI)](https://github.com/pardnchiu/PDQuickUI) [![](https://img.shields.io/npm/v/pdquickui)](https://www.npmjs.com/package/pdquickui) ![](https://img.shields.io/github/license/pardnchiu/PDQuickUI)<br>
@@ -15,7 +15,7 @@
 - **清晰的架構**：UI 和資料邏輯分離，維護方便。
 - **代碼簡潔**：減少重複代碼，提升可讀性。
 - **自動渲染**：監控資料變動並自動更新，減少手動操作。
-- **輕量化**：功能完整的同時，文件大小控制在 `20kb` 以內。
+- **輕量化**：使用原生 JS 和內建 API 撰寫，無任何外部依賴。
 
 ## 安裝方式
 
@@ -48,6 +48,8 @@
 | `:if`<br>`:else-if`<br>`:elif`<br>`:else` | 根據條件顯示或隱藏元素，實現分支邏輯。 |
 | `:model` | 將資料綁定到表單元素（如 `input`），當輸入變更時自動更新資料。 |
 | `:hide` | 根據特定條件隱藏元素。 |
+| `:animation` | 用於指定元素的過渡效果，如 `fade-in` 或 `expand`，以增強用戶體驗。 |
+| `:mask` | 控制區塊載入時的動畫效果，支援 `true|false|1|0`，提升載入動態視覺效果。 |
 | `:[attr]` | 設定元素屬性，例如 `ID`、`class`、圖像來源等。<br>範例：`:id`、`:class`、`:src`、`:alt`、`:href`... |
 | `@[event]` | 添加事件監聽器，當事件觸發時執行指定操作。<br>範例：`@click`、`@input`、`@mousedown`... |
 
