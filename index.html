@@ -51,7 +51,9 @@
 
         <!-- 資源預載: https://cdn.jsdelivr.net -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net">
-        <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdmarkdownkit@1.6.0/dist/PDMarkdownKit.js" as="script">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdmarkdownkit@latest/dist/PDQuickUI.js" as="script">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdmarkdownkit@latest/dist/PDRenderKit.js" as="script">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdmarkdownkit@latest/dist/PDMarkdownKit.js" as="script">
         <!-- <script src="./dist/PDQuickUI.js" copyright="Pardn Ltd"></script> -->
         <!-- <script src="./src/PDQuickUI.js" copyright="Pardn Ltd"></script> -->
 
@@ -215,7 +217,7 @@
                     },
                     when: {
                         before_render: _ => {
-                            console.log("準備渲染")
+                            console.log("準備渲染");
                             // return false;
                         },
                         rendered: _ => {
