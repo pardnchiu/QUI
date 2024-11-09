@@ -26,3 +26,4 @@
         }
     });
     ```
+- 非標準 CSS 屬性寫法將不再支持。請使用標準 CSS 屬性名稱。 (例如：將 `:borderRadius` 改為 `:border-radius`；將 `:bg-color` 改為 `:background-color`)

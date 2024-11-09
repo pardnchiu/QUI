@@ -17,11 +17,6 @@
 - **自動渲染**：監控資料變動並自動更新，減少手動操作。
 - **輕量化**：使用原生 JS 和內建 API 撰寫，無任何外部依賴。
 
-## 範例
-
-- 範例一: [預覽](https://pardnchiu.github.io/web-template/target/personal-introduction-20230220) [源碼](https://github.com/pardnchiu/web-template/blob/main/target/personal-introduction-20230220)
-- 範例二: [預覽](https://pardnchiu.github.io/web-template/target/20230616) [源碼](https://github.com/pardnchiu/web-template/blob/main/target/20230616)
-
 ## 安裝方式
 
 - **從 npm 安裝**
@@ -627,6 +622,11 @@
     ```
 
 </details>
+
+## 範例
+
+- 範例一: [預覽](https://pardnchiu.github.io/web-template/target/personal-introduction-20230220) [源碼](https://github.com/pardnchiu/web-template/blob/main/target/personal-introduction-20230220)
+- 範例二: [預覽](https://pardnchiu.github.io/web-template/target/20230616) [源碼](https://github.com/pardnchiu/web-template/blob/main/target/20230616)
 
 ## 開發者
 

@@ -1,6 +1,6 @@
 {
     "name": "pdquickui",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "description": "PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic.",
     "main": "dist/PDQuickUI.js",
     "module": "dist/PDQuickUI.module.js",
@@ -18,7 +18,8 @@
         "index.html",
         "src/interface.ts",
         "LICENSE",
-        "README.md"
+        "README.md",
+        "DEPRECATION.md"
     ],
     "repository": {
         "type": "git",

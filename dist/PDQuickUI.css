@@ -1,3 +1,4 @@
+
 *[\:animation="fade-in"],
 *[animation="fade-in"] {
     opacity: 0;
@@ -67,11 +68,6 @@
 }
 
 img[lazyload]:not([lazyload=""]) {
-    width: 1rem;
-    height: 1rem;
-    border: 0.25rem solid rgba(0, 0, 0, 0.1);
-    border-top-color: #3498db;
-    border-radius: 50%;
     animation: spin 2s ease-in-out infinite;
 }
 
@@ -83,14 +79,4 @@ img[lazyload]:not([lazyload=""]) {
     100% {
         transform: rotate(360deg);
     }
-}
-
-img[src]:not([src=""]) {
-    width: unset;
-    height: unset;
-    border: 0 solid transparent;
-    border-radius: 0;
-    animation: none;
-    transition: width 0.3s;
-    transition: height 0.3s;
 }

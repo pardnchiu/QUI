@@ -67,7 +67,7 @@
         <script src="./dist/PDQuickUI.js"></script>
     </head>
 
-    <body id="app" :animation="fade-in">
+    <body id="app" :effect="fade-in">
         <strong>延遲載入過渡</strong>
         <hr>
         <img :lazyload="https://picsum.photos/id/1/640/480" alt="">
@@ -239,13 +239,13 @@
                             // setTimeout(_ => {
 
                             //     app.data.heading = 3
-                            // }, 1000)
+                            // }, 2000)
                             // setTimeout(_ => {
 
                             //     app.data.isH2 = true
                             //     app.data.obj.home.ary[0].name = "Test"
 
-                            // }, 2000)
+                            // }, 3000)
                             console.log("已渲染")
                         },
                         before_update: _ => {
