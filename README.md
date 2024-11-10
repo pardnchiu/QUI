@@ -1,7 +1,11 @@
 # PDQuickUI
 
-![](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) ![](https://img.shields.io/github/size/pardnchiu/PDQuickUI/dist%2FPDQuickUI.js) ![](https://img.shields.io/github/license/pardnchiu/PDQuickUI)<br>
-[![](https://img.shields.io/github/v/release/pardnchiu/PDQuickUI)](https://github.com/pardnchiu/PDQuickUI) [![](https://img.shields.io/npm/v/pdquickui)](https://www.npmjs.com/package/pdquickui) ![](https://img.shields.io/jsdelivr/npm/hw/pdquickui)<br>
+![](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
+![](https://img.shields.io/github/size/pardnchiu/PDQuickUI/dist%2FPDQuickUI.js) 
+![](https://img.shields.io/github/license/pardnchiu/PDQuickUI)<br>
+[![](https://img.shields.io/github/v/release/pardnchiu/PDQuickUI)](https://github.com/pardnchiu/PDQuickUI) 
+[![](https://img.shields.io/npm/v/pdquickui)](https://www.npmjs.com/package/pdquickui) 
+[![](https://img.shields.io/jsdelivr/npm/hw/pdquickui)](https://www.jsdelivr.com/package/npm/pdquickui)<br>
 [![](https://img.shields.io/badge/read-English%20Version-ffffff)](https://github.com/pardnchiu/PDQuickUI/blob/main/README.en.md)
 
 `PDQuickUI` 是從 [PDRenderKit](https://github.com/pardnchiu/PDRenderKit) 中獨立出來的前端渲染框架，專注於強化前端框架功能。<br>
