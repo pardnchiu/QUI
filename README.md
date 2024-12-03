@@ -1,4 +1,6 @@
-# QuickUI (JavaScript Library)
+<img src="./static/image/logo.png" width=80>
+
+# QuickUI
 
 (Formerly known as PDQuickUI, renamed to QuickUI starting from version `0.6.0`)
 
@@ -689,7 +691,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
     <body id="app">
         <h1>{{ i18n.greeting }}, {{ i18n.username }}: {{ username }}</h1>
         <button @click="change" data-lang="zh">切換至中文</button>
-        <button @click="change" data-lang="zn">Switch to English</button>
+        <button @click="change" data-lang="en">Switch to English</button>
     </body>
     <script>
     const app = new QUI({
@@ -720,7 +722,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
     <body id="app">
         <h1>你好, 用戶名: Pardn</h1>
         <button data-lang="zh">切換至中文</button>
-        <button data-lang="zn">Switch to English</button>
+        <button data-lang="en">Switch to English</button>
     </body>
     ```
 - result  `i18nLang = en`
@@ -728,7 +730,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
     <body id="app">
         <h1>Hello, Username: Pardn</h1>
         <button data-lang="zh">切換至中文</button>
-        <button data-lang="zn">Switch to English</button>
+        <button data-lang="en">Switch to English</button>
     </body>
     ```
 
@@ -815,6 +817,13 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 ## License
 
 This project is licensed under the [MIT License](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE).
+
+## Obtain Complete Source Code
+
+[Contact me](mailto:dev@pardn.io) for the complete unobfuscated source code.<br>
+Feel free to modify and use for commercial purposes with the following licensing options:
+- Must retain `Powered by @pardnchiu/quickui` copyright notice: $7,500.
+- Fully autonomous, no copyright notice required: $10,000.
 
 ***
 

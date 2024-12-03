@@ -1,3 +1,5 @@
+<img src="./static/image/logo.png" width=80>
+
 # QuickUI
 
 *(原名：PDQuickUI，自 `0.6.0` 版本起更名為 QuickUI)*
@@ -686,7 +688,7 @@
     <body id="app">
         <h1>{{ i18n.greeting }}, {{ i18n.username }}: {{ username }}</h1>
         <button @click="change" data-lang="zh">切換至中文</button>
-        <button @click="change" data-lang="zn">Switch to English</button>
+        <button @click="change" data-lang="en">Switch to English</button>
     </body>
     <script>
     const app = new QUI({
@@ -717,7 +719,7 @@
     <body id="app">
         <h1>你好, 用戶名: 帕登</h1>
         <button data-lang="zh">切換至中文</button>
-        <button data-lang="zn">Switch to English</button>
+        <button data-lang="en">Switch to English</button>
     </body>
     ```
 - result  `i18nLang = en`
@@ -725,7 +727,7 @@
     <body id="app">
         <h1>Hello, Username: 帕登</h1>
         <button data-lang="zh">切換至中文</button>
-        <button data-lang="zn">Switch to English</button>
+        <button data-lang="en">Switch to English</button>
     </body>
     ```
 
@@ -812,6 +814,13 @@
 ## 授權條款
 
 本專案依據 [MIT](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE) 授權使用。
+
+## 獲取完整原始碼
+
+[聯絡我](mailto:dev@pardn.io) 獲取完整未混淆源碼<br>
+可隨意修改、商業使用，根據需求選擇授權版本：
+- 需保留 `Powered by @pardnchiu/quickui` 的版權聲明：$7,500
+- 完全自主，無需添加版權聲明：$10,000
 
 ***
 

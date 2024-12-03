@@ -1,6 +1,6 @@
 {
     "name": "@pardnchiu/quickui",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "A web frontend framework that supports conditional and loop rendering, data binding, monitoring data changes, and automatic rendering. Previously known as QuickUI.",
     "main": "dist/QuickUI.js",
     "module": "dist/QuickUI.esm.js",
@@ -16,12 +16,8 @@
     },
     "files": [
         "dist",
-        "static",
-        "index.html",
-        "src/interface.ts",
         "LICENSE",
-        "README.md",
-        "DEPRECATION.md"
+        "README.md"
     ],
     "repository": {
         "type": "git",
@@ -37,11 +33,20 @@
         "loop-rendering",
         "conditional-rendering"
     ],
-    "author": "邱敬幃 Pardn Chiu",
+    "author": {
+        "name": "邱敬幃 Pardn Chiu",
+        "email": "dev@pardn.io",
+        "url": "https://github.com/pardnchiu"
+    },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/pardnchiu/QuickUI/issues",
         "email": "dev@pardn.io"
     },
-    "homepage": "https://github.com/pardnchiu/QuickUI#readme"
+    "homepage": "https://github.com/pardnchiu/QuickUI#readme",
+    "devDependencies": {
+        "chokidar-cli": "3.0.0",
+        "terser": "5.31.3",
+        "sass": "1.62.0"
+    }
 }
