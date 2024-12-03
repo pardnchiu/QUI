@@ -1,4 +1,4 @@
-// import { viewer } from "https://cdn.jsdelivr.net/npm/pdmarkdownkit@1.6.0/dist/PDMarkdownKit.module.js";
+// import { viewer } from "https://cdn.jsdelivr.net/npm/@pardnchiu/nanomd@1.6.0/dist/PDMarkdownKit.module.js";
 
 // document.addEventListener("DOMContentLoaded", async _ => {
 //     let pre = "";
@@ -37,7 +37,7 @@
 //     });
 // });
 
-import { QUI } from "../../dist/PDQuickUI.module.js"
+import { QUI } from "../../dist/QuickUI.esm.js"
 
 const app = new QUI({
     id: "app",

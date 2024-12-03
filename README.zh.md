@@ -1,6 +1,6 @@
-# QuickUI (JavaScript Library)
+# QuickUI
 
-(Formerly known as PDQuickUI, renamed to QuickUI starting from version `0.6.0`)
+*(原名：PDQuickUI，自 `0.6.0` 版本起更名為 QuickUI)*
 
 ![tag](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
 ![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js) 
@@ -8,29 +8,30 @@
 [![npm](https://img.shields.io/npm/v/@pardnchiu/quickui)](https://www.npmjs.com/package/@pardnchiu/quickui)
 [![download](https://img.shields.io/npm/dm/@pardnchiu/quickui)](https://www.npmjs.com/package/@pardnchiu/quickui)
 [![jsdeliver](https://img.shields.io/jsdelivr/npm/hm/@pardnchiu/quickui)](https://www.jsdelivr.com/package/npm/@pardnchiu/quickui)<br>
-[![](https://img.shields.io/badge/查閱-中文版本-ffffff)](https://github.com/pardnchiu/QuickUI/blob/main/README.zh.md)
+[![](https://img.shields.io/badge/read-English%20Version-ffffff)](https://github.com/pardnchiu/QuickUI/blob/main/README.en.md)
 
-`QuickUI` is a front-end rendering framework derived from [PDRenderKit](https://github.com/pardnchiu/PDRenderKit), focusing on enhancing front-end framework features.<br>
-By integrating a virtual DOM, it rewrites the rendering logic to improve rendering efficiency, enabling faster data observation and automatic updates.<br>
+`QuickUI` 是從 [PDRenderKit](https://github.com/pardnchiu/PDRenderKit) 中獨立出來的前端渲染框架，專注於強化前端框架功能。<br>
+透過引入虛擬 DOM 概念重寫渲染邏輯，提升渲染效能，並實現更高效的數據監聽和自動更新。<br>
 
-This project removes the `prototype` extensions from `PDRenderKit` to ensure compatibility and performance, making it suitable for complex applications.<br>
-It provides both `module` and non-`module` versions and changes the license from `GPL-3.0` in `PDRenderKit` to `MIT`.
+本專案移除了 `PDRenderKit` 中針對 `prototype` 的擴展，確保兼容性與效能，適合用於複雜的應用場景。<br>
+提供 `module` 和非 `module` 版本，授權從 `PDRenderKit` 的 `GPL-3.0` 更改為 `MIT`。<br>
 
-## Features
+## 特點
 
-- **Clear Architecture**: Separates UI from data logic, making it easier to maintain.
-- **Code Simplicity**: Reduces redundant code and enhances readability.
-- **Automatic Rendering**: Monitors data changes and updates automatically, minimizing manual operations.
-- **Lightweight**: Maintains full functionality within a file size of less than `20kb`.
+- **清晰的架構**：UI 和資料邏輯分離，維護方便。
+- **代碼簡潔**：減少重複代碼，提升可讀性。
+- **自動渲染**：監控資料變動並自動更新，減少手動操作。
+- **輕量化**：使用原生 JS 和內建 API 撰寫，無任何外部依賴。
 
-## Installation
+## 安裝方式
 
-- **Install from npm**
+- 從 npm 安裝
     ```bash
     npm i @pardnchiu/quickui
     ```
-- **Include from CDN**
-    - **Directly include `QuickUI`**
+
+- 從 CDN 引入
+    - **引入 `QuickUI` 套件**
         ```html
         <!-- Version 0.6.0 and above -->
         <script src="https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@[VERSION]/dist/QuickUI.js"></script>
@@ -38,7 +39,7 @@ It provides both `module` and non-`module` versions and changes the license from
         <!-- Version 0.5.4 and below -->
         <script src="https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.js"></script>
         ```
-    - **Module Version**
+    - **Module 版本**
         ```javascript
         // Version 0.6.0 and above
         import { QUI } from "https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@[VERSION]/dist/QuickUI.esm.js";
@@ -46,68 +47,66 @@ It provides both `module` and non-`module` versions and changes the license from
         // Version 0.5.4 and below
         import { QUI } from "https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.module.js";
         ```
+## 使用方法
 
-## Usage
-
-- Initialize `QUI`
+- **初始化 `QUI`**
     ```Javascript
     const app = new QUI({
-        id: "", // Specify rendering element
+        id: "", // 指定渲染元素
         data: {
-            // Custom DATA
+            // 自訂 DATA
         },
         event: {
-            // Custom EVENT
+            // 自訂 EVENT
         },
         when: {
             before_render: function () {
-                // Stop rendering
+                // 停止渲染
             },
             rendered: function () {
-                // Rendered
+                // 已渲染
             },
             before_update: function () {
-                // Stop updating
+                // 停止更新
             },
             updated: function () {
-                // Updated
+                // 已更新
             },
             before_destroy: function () {
-                // Stop destruction
+                // 停止銷毀
             },
             destroyed: function () {
-                // Destroyed
+                // 已銷毀
             }
         }
     });
     ```
 
-## Overview
-Automatic Rendering: Automatically reloads when data changes are detected.
+## 功能介紹
+自動渲染：加載自動渲染在檢測到資料變更時自動重新渲染。
 
 <details>
-<summary>Attributes Overview</summary>
+<summary>屬性概覽</summary>
 
-| Attribute | Description |
+| 屬性 | 描述 |
 | --- | --- |
-| `{{value}}` | Inserts text into HTML tags and automatically updates with data changes. |
-| `:path` | Used with the `temp` tag to load HTML fragments from external files into the current page. |
-| `:html` | Replaces the element's `innerHTML` with text. |
-| `:for` | Supports formats like `item in items`, `(item, index) in items`, `(key, value) in object`. Iterates over data collections to generate corresponding HTML elements. |
-| `:if`<br>`:else-if`<br>`:elif`<br>`:else` | Displays or hides elements based on specified conditions, enabling branching logic. |
-| `:model` | Binds data to form elements (e.g., `input`), updating data automatically when input changes. |
-| `:hide` | Hides elements based on specific conditions. |
-| `:animation` | Specifies transition effects for elements, such as `fade-in` or `expand`, to enhance user experience. |
-| `:mask` | Controls block loading animations, supporting `true|false|1|0`, to enhance dynamic visual effects during loading. |
-| `:[attr]` | Sets element attributes, such as `ID`, `class`, image source, etc.<br>Examples: `:id`/`:class`/`:src`/`:alt`/`:href`... |
-| `:[css]` | Sets element CSS, such as margin, padding, etc.
-Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
-| `@[event]` | Adds event listeners that trigger specified actions upon activation.<br>Examples: `@click`/`@input`/`@mousedown`... |
+| `{{value}}` | 將文字插入到 HTML 標籤中，並隨資料變更自動更新。 |
+| `:path` | 搭配 `temp` 標籤，用於將外部文件中的 HTML 片段加載到當前頁面。 |
+| `:html` | 使用文本替換元素的 `innerHTML`。 |
+| `:for` | 支援 `item in items`、`(item, index) in items`、`(key, value) in object` 格式，遍歷資料集合，生成對應的 HTML 元素。 |
+| `:if`<br>`:else-if`<br>`:elif`<br>`:else` | 根據條件顯示或隱藏元素，實現分支邏輯。 |
+| `:model` | 將資料綁定到表單元素（如 `input`），當輸入變更時自動更新資料。 |
+| `:hide` | 根據特定條件隱藏元素。 |
+| `:effect` | 用於指定元素的過渡效果，如 `fade-in` 或 `expand`，以增強用戶體驗。 |
+| `:mask` | 控制區塊載入時的動畫效果，支援 `true|false|1|0`，提升載入動態視覺效果。 |
+| `:[attr]` | 設定元素屬性，例如 `ID`、`class`、圖像來源等。<br>範例：`:id`、`:class`、`:src`、`:alt`、`:href`... |
+| `:[css]` | 設定元素CSS，例如 `margin`、`padding` 等。<br>範例：`:background-color`、`:opacity`、`:margin`、`:top`、`:position`... |
+| `@[event]` | 添加事件監聽器，當事件觸發時執行指定操作。<br>範例：`@click`、`@input`、`@mousedown`... |
 
 </details>
 
 <details>
-<summary>Text Replacement</summary>
+<summary>文字替換</summary>
 
 ### `{{value}}`
 
@@ -158,10 +157,10 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Insert Block</summary>
+<summary>插入區塊</summary>
 
 > [!NOTE]
-> Ensure to disable local file restrictions in your browser or use a live server when testing.
+> 確保測試時已禁用瀏覽器中的本地文件限制或使用實時服務器。
 
 ### `:path`
 
@@ -184,7 +183,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 - Result
     ```html
     <body id="app">
-        <!-- Directly inserted PATH content -->
+        <!-- 直接插入 PATH 內容 -->
         <h1>path heading</h1>
         <p>path content</p>
     </body>
@@ -193,8 +192,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Loop Rendering</summary>
-
+<summary>迴圈渲染</summary>
 
 ### `:for`
 
@@ -337,7 +335,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Conditional Rendering</summary>
+<summary>條件渲染</summary>
 
 - index.html
     ```html
@@ -386,7 +384,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Template Rendering</summary>
+<summary>模板渲染</summary>
 
 - index.html
     ```HTML
@@ -422,7 +420,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Binding</summary>
+<summary>雙向綁定</summary>
 
 ```html
 <body id="app">
@@ -447,7 +445,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Event</summary>
+<summary>事件偵測</summary>
 
 ```html
 <body id="app">
@@ -465,14 +463,13 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </script>
 ```
     
-    
 </details>
 
 <details>
-<summary>CSS</summary>
+<summary>CSS設置</summary>
 
 > [!NOTE]
-> Supports simple settings using :[CSS property], directly binding data to style attributes.
+> 支援 `:[CSS屬性]` 的簡易設定方式，直接將資料綁定到樣式屬性。
 
 - index.html
     ```html
@@ -499,7 +496,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Functions</summary>
+<summary>可用函式</summary>
 
 ### `LENGTH()`
 
@@ -603,7 +600,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Lazyload</summary>
+<summary>懶加載</summary>
 
 ### `:lazyload`
 
@@ -619,7 +616,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
                 image: "test.jpg"
             },
             option: {
-                lazyload: true // Enable image lazy loading: true|false (default: true)
+                lazyload: true, // 圖片延遲加載: true|false (預設: true)
             }
         });
     </script>
@@ -653,7 +650,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
                 svg: "test.svg",
             },
             option: {
-                svg: true  // Enable SVG file transformation: true|false (default: true)
+                svg: true // SVG 檔案轉換: true|false (預設: true)
             }
         });
     </script>
@@ -671,11 +668,11 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details> 
-<summary>i18n</summary>
+<summary>多國語言</summary>
 
 > [!NOTE]
-> If the format is an object, the multilingual content is directly configured.
-> If the format is a string, the language file is dynamically loaded via fetch.
+> 若為物件格式，直接配置多語言內容。
+> 若為字串格式，會透過 `fetch` 動態載入語言檔案。
 
 - en.json
     ```JSON
@@ -695,7 +692,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
     const app = new QUI({
         id: "app",
         data: {
-            username: "Pardn"
+            username: "帕登"
         },
         i18n: {
             zh: {
@@ -704,7 +701,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
             },
             en: "en.json",
         },
-        i18nLang: "zh | en", // Select the displayed language
+        i18nLang: "zh | en", // 選擇顯示語言
         event: {
             change: e => {
                 const _this = e.target;
@@ -718,7 +715,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 - result  `i18nLang = zh`
     ```html
     <body id="app">
-        <h1>你好, 用戶名: Pardn</h1>
+        <h1>你好, 用戶名: 帕登</h1>
         <button data-lang="zh">切換至中文</button>
         <button data-lang="zn">Switch to English</button>
     </body>
@@ -726,7 +723,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 - result  `i18nLang = en`
     ```html
     <body id="app">
-        <h1>Hello, Username: Pardn</h1>
+        <h1>Hello, Username: 帕登</h1>
         <button data-lang="zh">切換至中文</button>
         <button data-lang="zn">Switch to English</button>
     </body>
@@ -735,7 +732,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Lifecycle Hooks</summary>
+<summary>生命週期</summary>
 
 ```html
 <body id="app"></body>
@@ -744,25 +741,25 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
         id: "app",
         when: {
             before_render: function () {
-                // Stop rendering
+                // 停止渲染
                 // retuen false 
             },
             rendered: function () {
-                // Rendered
+                // 已掛載
             },
             before_update: function () {
-                // Stop updating
+                // 停止更新
                 // retuen false 
             },
             updated: function () {
-                // Updated
+                // 已更新
             },
             before_destroy: function () {
-                // Stop destruction
+                // 停止銷毀
                 // retuen false 
             },
             destroyed: function () {
-                // Destroyed
+                // 已銷毀
             }
         }
     });
@@ -772,28 +769,28 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 </details>
 
 <details>
-<summary>Data Retrieval</summary>
+<summary>資料獲取</summary>
 
 ```html
 <body id="app">
     <input type="text" :model="test">
-    <button @click="get">Test</button>
+    <button @click="get">測試</button>
 </body>
 <script>
     const app = new QUI({
         id: "app",
         data: {
-            // Value bound to the input
+            // 給 input 綁定的值
             test: 123
         },
         event: {
             get: _ => {
-                // Show an alert with the value of test on button click
+                // 點擊時彈出內容為 test 值的通知
                 alert(app.data.test);
             },
             set: _ => {
                 let dom = document.createElement("button");
-                // Assign the button click event to the get function
+                // 按鈕點按事件設置為 get 函式
                 dom.onclick = app.event.get;
                 app.body.append(dom);
             }
@@ -804,7 +801,7 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 
 </details>
 
-## Creator
+## 開發者
 
 <img src="https://avatars.githubusercontent.com/u/25631760" align="left" width="96" height="96" style="margin-right: 0.5rem;" />
 
@@ -812,9 +809,9 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 
 [![](https://pardn.io/image/mail.svg)](mailto:dev@pardn.io) [![](https://skillicons.dev/icons?i=linkedin)](https://linkedin.com/in/pardnchiu) 
 
-## License
+## 授權條款
 
-This project is licensed under the [MIT License](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE).
+本專案依據 [MIT](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE) 授權使用。
 
 ***
 

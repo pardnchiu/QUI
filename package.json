@@ -1,13 +1,15 @@
 {
-    "name": "pdquickui",
-    "version": "0.5.4",
-    "description": "PDQuickUI contains a lightweight front-end framework designed to separate the front-end user interface and data logic.",
-    "main": "dist/PDQuickUI.js",
-    "module": "dist/PDQuickUI.module.js",
+    "name": "@pardnchiu/quickui",
+    "version": "0.6.0",
+    "description": "A web frontend framework that supports conditional and loop rendering, data binding, monitoring data changes, and automatic rendering. Previously known as QuickUI.",
+    "main": "dist/QuickUI.js",
+    "module": "dist/QuickUI.esm.js",
     "types": "src/interface.ts",
     "scripts": {
-        "minify": "npx terser src/*.js -c -m -o dist/PDQuickUI.js --config-file terser.config.json --name-cache terser.cache.json && npx terser src/*.js -c -m -o dist/PDQuickUI.module.js --config-file terser.config.json --name-cache terser.cache.json && echo 'export const QUI = window.QUI;' >> dist/PDQuickUI.module.js",
-        "minify-w": "chokidar 'src/PDQuickUI.js' -c 'npm run minify'"
+        "minify": "npx terser src/*.js -c -m -o dist/QuickUI.js --config-file terser.config.json --name-cache terser.cache.json && npx terser src/*.js -c -m -o dist/QuickUI.esm.js --config-file terser.config.json --name-cache terser.cache.json && echo 'export const QUI = window.QUI;' >> dist/QuickUI.esm.js",
+        "minify-w": "chokidar 'src/QuickUI.js' -c 'npm run minify'",
+        "sass": "sass src/sass:dist/ -w --style compressed --no-source-map",
+        "sass-index": "sass static/sass/:static/css/ -w --style compressed --no-source-map"
     },
     "publishConfig": {
         "access": "public"
@@ -23,17 +25,23 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pardnchiu/PDQuickUI.git"
+        "url": "git+https://github.com/pardnchiu/QuickUI.git"
     },
     "keywords": [
         "javascript-library",
-        "front-end-framework"
+        "front-end-framework",
+        "quickui",
+        "UI-framework",
+        "data-binding",
+        "virtual-DOM",
+        "loop-rendering",
+        "conditional-rendering"
     ],
     "author": "邱敬幃 Pardn Chiu",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/pardnchiu/PDQuickUI/issues",
+        "url": "https://github.com/pardnchiu/QuickUI/issues",
         "email": "dev@pardn.io"
     },
-    "homepage": "https://github.com/pardnchiu/PDQuickUI#readme"
+    "homepage": "https://github.com/pardnchiu/QuickUI#readme"
 }

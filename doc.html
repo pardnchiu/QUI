@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="robots" content="index, follow">
+
+        <!-- SEO 標題與描述 -->
+        <title>QuickUI 文檔 - 輕量化前端渲染框架 - 邱敬幃</title>
+        <meta name="title" content="QuickUI 文檔 - 輕量化前端渲染框架 - 邱敬幃">
+        <meta name="description" content="QuickUI 是一款基於純 JavaScript 搭配原生 APIs 的輕量化前端渲染框架，支援虛擬 DOM、高效數據監控與自動更新，專注於簡化開發流程並提升渲染效能。">
+        <meta name="keywords" content="QuickUI, JavaScript, Frontend Rendering Framework, Virtual DOM, Efficient Rendering, Auto Update, UI Tools, Lightweight, Rapid Development, Pardn Chiu, 前端渲染框架, 虛擬 DOM, 高效渲染, 自動更新, UI工具, 輕量化, 快速開發, 邱敬幃">
+        <meta name="author" content="邱敬幃 Pardn Chiu">
+        <link rel="author" href="https://pardnchiu.github.io">
+        <link rel="canonical" href="https://pardnchiu.github.io/QuickUI/">
+
+        <!-- Favicon -->
+        <link rel="icon" href="./static/image/logo.png" type="image/x-icon">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="QuickUI 文檔 - 輕量化前端渲染框架 - 邱敬幃">
+        <meta property="og:description" content="QuickUI 是一款基於純 JavaScript 搭配原生 APIs 的輕量化前端渲染框架，支援虛擬 DOM、高效數據監控與自動更新，專注於簡化開發流程並提升渲染效能。">
+        <meta property="og:image" content="./static/image/website.jpg">
+        <meta property="og:url" content="https://pardnchiu.github.io/QuickUI/">
+        <meta property="og:site_name" content="QuickUI">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="zh_TW">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="QuickUI | Lightweight Frontend Framework | 邱敬幃 Pardn Chiu">
+        <meta property="og:description" content="QuickUI 是一款基於純 JavaScript 搭配原生 APIs 的輕量化前端渲染框架，支援虛擬 DOM、高效數據監控與自動更新，專注於簡化開發流程並提升渲染效能。">
+        <meta property="twitter:image" content="./static/image/website.jpg">
+        <meta property="twitter:url" content="https://pardnchiu.github.io/QuickUI/">
+
+        <!-- Google Verification -->
+        <meta name="google-site-verification" content="YQQ2f6AchR8dcb55Az2BYd_mw4TrP0J1RApD-v2v65Y">
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5VYEZPVXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-L5VYEZPVXX');
+        </script>
+
+        <!-- Preload and Preconnect -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css" as="style">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css">
+
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@pardnchiu/nanomd@1.8.5/dist/NanoMD.js" as="script">
+        <script src="https://cdn.jsdelivr.net/npm/@pardnchiu/nanomd@1.8.5/dist/NanoMD.js" copyright="Pardn Ltd"></script>
+
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap">
+
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@latest/dist/QuickUI.js" as="script">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@pardnchiu/nanomd@latest/dist/NanoMD.js" as="script">
+
+        <!-- Local Resources -->
+        <link rel="stylesheet" href="./static/css/index.css">
+        <script src="./dist/QuickUI.js"></script>
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "QuickUI - 輕量化前端渲染框架",
+            "description": "QuickUI 是一款基於 JavaScript 的輕量化前端渲染框架，支援虛擬 DOM、高效數據監控與自動更新，專注於提升效能與開發效率，適合用於複雜應用場景。",
+            "url": "https://pardnchiu.github.io/QuickUI/",
+            "creator": {
+                "@type": "Person",
+                "name": "邱敬幃 Pardn Chiu",
+                "url": "https://pardnchiu.github.io"
+            },
+            "datePublished": "2024-11-29",
+            "dateModified": "2024-11-29",
+            "mainEntity": [
+                {
+                    "@type": "WebPageElement",
+                    "name": "安裝與使用 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "屬性概覽 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=overview"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "文字替換 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=text"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "插入區塊 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=block"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "迴圈渲染 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=forloop"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "條件渲染 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=ifelse"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "雙向綁定 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=binding"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "事件偵測 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=event"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "CSS設置 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=css"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "可用函式 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=function"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "懶加載 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=lazyload"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "模板渲染 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=model"
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "生命週期 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=lifecircle""
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "資料獲取 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=data""
+                },
+                {
+                    "@type": "WebPageElement",
+                    "name": "即將棄用 - QuickUI",
+                    "url": "https://pardnchiu.github.io/QuickUI/doc.html?tag=DEPRECATION""
+                }
+            ]
+        }
+        </script>
+    </head>
+
+    <body id="app">
+        <section class="left" data-index="1">
+            <a href="/index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="/doc.html">
+                <i class="fa-brands fa-readme"></i>
+            </a>
+            <a href="https://github.com/pardnchiu/QuickUI/releases" target="_blank">
+                <i class="fa-solid fa-code-branch"></i>
+            </a>
+            <a class="logo" href="/index.html">
+                <img src="./static/image/logo.svg" alt="">
+                <strong>QuickUI</strong>
+            </a>
+        </section>
+        <section class="right">
+            <section class="doc">
+                <section class="tab" data-index="">
+                    <button @click="changeContent" data-title="installation">安裝與使用</button>
+                    <button @click="changeContent" data-title="overview">屬性概覽</button>
+                    <button @click="changeContent" data-title="text">文字替換</button>
+                    <button @click="changeContent" data-title="block">插入區塊</button>
+                    <button @click="changeContent" data-title="forloop">迴圈渲染</button>
+                    <button @click="changeContent" data-title="ifelse">條件渲染</button>
+                    <button @click="changeContent" data-title="model">模板渲染</button>
+                    <button @click="changeContent" data-title="binding">雙向綁定</button>
+                    <button @click="changeContent" data-title="event">事件偵測</button>
+                    <button @click="changeContent" data-title="css">CSS設置</button>
+                    <button @click="changeContent" data-title="function">可用函式</button>
+                    <button @click="changeContent" data-title="lazyload">懶加載</button>
+                    <button @click="changeContent" data-title="i18n">多國語言</button>
+                    <button @click="changeContent" data-title="lifecircle">生命週期</button>
+                    <button @click="changeContent" data-title="data">資料獲取</button>
+                    <button @click="changeContent" data-title="DEPRECATION">即將棄用</button>
+                </section>
+                <section id="doc-body-content" class="body"></section>
+            </section>
+            <!--  -->
+            <footer>
+                <p>Created by <a href="https://github.com/pardnchiu" target="_blank">邱敬幃</a></p>
+                <p><a href="https://github.com/pardnchiu/QuickUI" target="_blank">QuickUI on GitHub</a></p>
+                <p>&copy; 2024</p>
+            </footer>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", _ => {
+                const app = new QUI({
+                    id: "app",
+                    event: {
+                        changeContent: async e => {
+                            const _this = e.target;
+                            const parent = _this.parentElement;
+                            const index = Array.prototype.indexOf.call(parent.children, _this);
+                            const title = _this.dataset.title;
+                            let url = new URL(location.href);
+
+                            parent.dataset.index = index;
+                            parent.dataset.show = 0;
+
+                            editor.body.scrollTop = 0;
+                            editor.clear();
+
+                            let pre = "";
+
+                            if (title === "DEPRECATION") {
+                                await fetch("./" + title + ".md")
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        pre = data;
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+                            }
+                            else {
+                                await fetch("./static/md/" + title + ".md")
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        pre = data;
+                                    })
+                                    .catch(error => {
+                                        console.error(error);
+                                    });
+                            };
+
+                            url.searchParams.set("tag", title);
+
+                            window.history.replaceState({}, document.title, url.href);
+
+                            editor.init(pre);
+                        },
+                    },
+                    when: {
+                        rendered: _ => {
+                            const url = new URL(location.href);
+                            let tag = url.searchParams.get("tag");
+
+                            if ({
+                                installation: 0,
+                                overview: 0,
+                                text: 0,
+                                block: 0,
+                                forloop: 0,
+                                ifelse: 0,
+                                model: 0,
+                                binding: 0,
+                                event: 0,
+                                css: 0,
+                                function: 0,
+                                lazyload: 0,
+                                i18n: 0,
+                                lifecircle: 0,
+                                data: 0,
+                                DEPRECATION: 0
+                            }[tag] == null) {
+                                tag = "installation";
+                            }
+
+                            editor = new MDViewer({
+                                id: "doc-body-content",
+                                style: {
+                                    fill: 0
+                                }
+                            });
+
+                            const target = document.querySelector("button[data-title='" + tag + "']");
+                            target.click();
+                            // const tab = document.getElementById("doc-body-tab");
+                            // const index = tab.dataset.index = parseInt(0);
+                            // tab.children[index].click();
+                        }
+                    }
+                })
+            })
+        </script>
+    </body>
+
+</html>
