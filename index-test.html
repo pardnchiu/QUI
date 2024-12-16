@@ -69,7 +69,7 @@
 
     <body id="app" :effect="fade-in">
         <p @click="click">i18n</p>
-        <p>{{ i18n.greeting }}, {{ i18n.user }}: {{ username }}</p>
+        <p :test="i18n.greeting">{{ i18n.greeting }}, {{ i18n.user }}: {{ username }}</p>
         <section :html="html"></section>
         <strong :html="延遲載入過渡"></strong>
         <hr>

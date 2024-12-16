@@ -1,6 +1,6 @@
 {
     "name": "@pardnchiu/quickui",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "description": "A web frontend framework that supports conditional and loop rendering, data binding, monitoring data changes, and automatic rendering. Previously known as QuickUI.",
     "main": "dist/QuickUI.js",
     "module": "dist/QuickUI.esm.js",
@@ -38,7 +38,7 @@
         "email": "dev@pardn.io",
         "url": "https://github.com/pardnchiu"
     },
-    "license": "MIT",
+    "license": "Proprietary",
     "bugs": {
         "url": "https://github.com/pardnchiu/QuickUI/issues",
         "email": "dev@pardn.io"
