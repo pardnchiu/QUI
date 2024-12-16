@@ -1,12 +1,11 @@
-<img src="./static/image/logo.png" width=80>
+<img src="./dist/logo.png" width=80>
 
 # QuickUI
 
 *(原名：PDQuickUI，自 `0.6.0` 版本起更名為 QuickUI)*
 
 ![tag](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
-![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js) 
-![license](https://img.shields.io/github/license/pardnchiu/QuickUI)<br>
+![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js)<br>
 [![npm](https://img.shields.io/npm/v/@pardnchiu/quickui)](https://www.npmjs.com/package/@pardnchiu/quickui)
 [![download](https://img.shields.io/npm/dm/@pardnchiu/quickui)](https://www.npmjs.com/package/@pardnchiu/quickui)
 [![jsdeliver](https://img.shields.io/jsdelivr/npm/hm/@pardnchiu/quickui)](https://www.jsdelivr.com/package/npm/@pardnchiu/quickui)<br>
@@ -49,6 +48,7 @@
         // Version 0.5.4 and below
         import { QUI } from "https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.module.js";
         ```
+        
 ## 使用方法
 
 - **初始化 `QUI`**
@@ -100,7 +100,7 @@
 | `:model` | 將資料綁定到表單元素（如 `input`），當輸入變更時自動更新資料。 |
 | `:hide` | 根據特定條件隱藏元素。 |
 | `:effect` | 用於指定元素的過渡效果，如 `fade-in` 或 `expand`，以增強用戶體驗。 |
-| `:mask` | 控制區塊載入時的動畫效果，支援 `true|false|1|0`，提升載入動態視覺效果。 |
+| `:mask` | 控制區塊載入時的動畫效果，支援 `true\|false\|1\|0`，提升載入動態視覺效果。 |
 | `:[attr]` | 設定元素屬性，例如 `ID`、`class`、圖像來源等。<br>範例：`:id`、`:class`、`:src`、`:alt`、`:href`... |
 | `:[css]` | 設定元素CSS，例如 `margin`、`padding` 等。<br>範例：`:background-color`、`:opacity`、`:margin`、`:top`、`:position`... |
 | `@[event]` | 添加事件監聽器，當事件觸發時執行指定操作。<br>範例：`@click`、`@input`、`@mousedown`... |
@@ -813,7 +813,8 @@
 
 ## 授權條款
 
-本專案依據 [MIT](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE) 授權使用。
+本專案採用 **專有授權**。  
+更多詳細資訊，請參閱本倉庫中的 [最終使用者授權協議（EULA）](https://github.com/pardnchiu/QuickUI/blob/main/LICENSE)。
 
 ## 獲取完整原始碼
 

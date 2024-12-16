@@ -10,7 +10,7 @@
 | `:model` | 將資料綁定到表單元素（如 `input`），當輸入變更時自動更新資料。 |
 | `:hide` | 根據特定條件隱藏元素。 |
 | `:effect` | 用於指定元素的過渡效果，如 `fade-in` 或 `expand`，以增強用戶體驗。 |
-| `:mask` | 控制區塊載入時的動畫效果，支援 `true|false|1|0`，提升載入動態視覺效果。 |
+| `:mask` | 控制區塊載入時的動畫效果，支援 `true\|false\|1\|0`，提升載入動態視覺效果。 |
 | `:[attr]` | 設定元素屬性，例如 `ID`、`class`、圖像來源等。<br>範例：`:id`、`:class`、`:src`、`:alt`、`:href`... |
 | `:[css]` | 設定元素CSS，例如 `margin`、`padding` 等。<br>範例：`:background-color`、`:opacity`、`:margin`、`:top`、`:position`... |
 | `@[event]` | 添加事件監聽器，當事件觸發時執行指定操作。<br>範例：`@click`、`@input`、`@mousedown`... |

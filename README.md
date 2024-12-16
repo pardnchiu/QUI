@@ -1,12 +1,11 @@
-<img src="./static/image/logo.png" width=80>
+<img src="./dist/logo.png" width=80>
 
 # QuickUI
 
 (Formerly known as PDQuickUI, renamed to QuickUI starting from version `0.6.0`)
 
 ![tag](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
-![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js) 
-![license](https://img.shields.io/github/license/pardnchiu/QuickUI)<br>
+![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js)<br>
 [![npm](https://img.shields.io/npm/v/@pardnchiu/quickui)](https://www.npmjs.com/package/@pardnchiu/quickui)
 [![download](https://img.shields.io/npm/dm/@pardnchiu/quickui)](https://www.npmjs.com/package/@pardnchiu/quickui)
 [![jsdeliver](https://img.shields.io/jsdelivr/npm/hm/@pardnchiu/quickui)](https://www.jsdelivr.com/package/npm/@pardnchiu/quickui)<br>
@@ -100,10 +99,9 @@ Automatic Rendering: Automatically reloads when data changes are detected.
 | `:model` | Binds data to form elements (e.g., `input`), updating data automatically when input changes. |
 | `:hide` | Hides elements based on specific conditions. |
 | `:animation` | Specifies transition effects for elements, such as `fade-in` or `expand`, to enhance user experience. |
-| `:mask` | Controls block loading animations, supporting `true|false|1|0`, to enhance dynamic visual effects during loading. |
+| `:mask` | Controls block loading animations, supporting `true\|false\|1\|0`, to enhance dynamic visual effects during loading. |
 | `:[attr]` | Sets element attributes, such as `ID`, `class`, image source, etc.<br>Examples: `:id`/`:class`/`:src`/`:alt`/`:href`... |
-| `:[css]` | Sets element CSS, such as margin, padding, etc.
-Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
+| `:[css]` | Sets element CSS, such as margin, padding, etc. Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 | `@[event]` | Adds event listeners that trigger specified actions upon activation.<br>Examples: `@click`/`@input`/`@mousedown`... |
 
 </details>
@@ -816,7 +814,8 @@ Examples: `:background-color`, `:opacity`, `:margin`, `:top`, `:position`... |
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/pardnchiu/PDMarkdownKit/blob/main/LICENSE).
+This project is licensed under a **Proprietary License**.  
+You may use, install, and run this software only under the terms specified in the [End-User License Agreement (EULA)](https://github.com/pardnchiu/QuickUI/blob/main/LICENSE).
 
 ## Obtain Complete Source Code
 
