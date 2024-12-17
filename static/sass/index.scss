@@ -334,7 +334,6 @@ body {
                     }
 
                     >section {
-                        padding: $_48 $_24 $_24;
                         flex-grow: 1;
                         height: initial;
 
@@ -357,7 +356,6 @@ body {
 
             >div {
                 display: flex;
-                flex-flow: row;
                 justify-content: flex-start;
                 align-items: flex-start;
                 padding: $_32 0;
