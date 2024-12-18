@@ -38,7 +38,7 @@
         "email": "dev@pardn.io",
         "url": "https://github.com/pardnchiu"
     },
-    "license": "Proprietary",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/pardnchiu/QuickUI/issues",
         "email": "dev@pardn.io"

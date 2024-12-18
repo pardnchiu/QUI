@@ -1,117 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://pardn.ltd/QuickUI</loc>
+        <loc>https://quickui.pardn.io/</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1</priority>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/index.html?lang=zh"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/index.html?lang=en"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/index.html</loc>
+        <loc>https://quickui.pardn.io/doc.html</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1</priority>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=installation</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=installation</loc>
-        <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=overview</loc>
-        <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=installation"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=installation"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=text</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=overview</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=overview"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=overview"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=block</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=text</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=text"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=text"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=forloop</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=block</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=block"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=block"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=ifelse</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=forloop</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=forloop"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=forloop"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=model</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=ifelse</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=ifelse"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=ifelse"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=binding</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=model</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=model"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=model"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=event</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=binding</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=binding"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=binding"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=css</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=event</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=event"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=event"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=function</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=css</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=css"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=css"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=lazyload</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=function</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=function"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=function"/>
+    </url>
+
+    <url>
+        <loc>https://quickui.pardn.io/doc.html?tag=lazyload</loc>
+        <lastmod>2024-12-04</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=lazyload"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=lazyload"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=i18n</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=i18n</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=i18n"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=i18n"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=lifecircle</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=lifecircle</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=lifecircle"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=lifecircle"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=data</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=data</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=data"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=data"/>
     </url>
     <url>
-        <loc>https://pardn.ltd/QuickUI/doc.html?tag=DEPRECATION</loc>
+        <loc>https://quickui.pardn.io/doc.html?tag=DEPRECATION</loc>
         <lastmod>2024-12-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://quickui.pardn.io/doc.html?lang=zh&amp;tag=DEPRECATION"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://quickui.pardn.io/doc.html?lang=en&amp;tag=DEPRECATION"/>
     </url>
 </urlset>
