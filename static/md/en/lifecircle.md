@@ -1,31 +1,29 @@
-## 生命週期
-
 ```html
 <body id="app"></body>
 <script>
     const app = new QUI({
         id: "app",
         when: {
-            before_mount: function () {
-                // 停止渲染
+            before_render: function () {
+                // Stop rendering
                 // retuen false 
             },
-            mounted: function () {
-                console.log("已掛載");
+            rendered: function () {
+                // Rendered
             },
             before_update: function () {
-                // 停止更新
+                // Stop updating
                 // retuen false 
             },
             updated: function () {
-                console.log("已更新");
+                // Updated
             },
             before_destroy: function () {
-                // 停止銷毀
+                // Stop destruction
                 // retuen false 
             },
             destroyed: function () {
-                console.log("已銷毀");
+                // Destroyed
             }
         }
     });

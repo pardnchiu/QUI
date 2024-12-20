@@ -1,25 +1,23 @@
-## 資料獲取
-
 ```html
 <body id="app">
     <input type="text" :model="test">
-    <button @click="get">測試</button>
+    <button @click="get">Test</button>
 </body>
 <script>
     const app = new QUI({
         id: "app",
         data: {
-            // 給 input 綁定的值
+            // Value bound to the input
             test: 123
         },
         event: {
             get: _ => {
-                // 點擊時彈出內容為 test 值的通知
+                // Show an alert with the value of test on button click
                 alert(app.data.test);
             },
             set: _ => {
                 let dom = document.createElement("button");
-                // 按鈕點按事件設置為 get 函式
+                // Assign the button click event to the get function
                 dom.onclick = app.event.get;
                 app.body.append(dom);
             }

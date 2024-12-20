@@ -81,7 +81,7 @@ body {
             top: 0;
             left: -100%;
             text-decoration: none;
-            transition: 0.2s;
+            transition: 0.3s;
 
             @media screen and (min-width: 414px) {
                 left: 0;
@@ -94,7 +94,7 @@ body {
             img {
                 width: $_64;
                 height: $_64;
-                transition: 0.2s;
+                transition: 0.3s;
 
                 @media screen and (min-width: 640px) {
                     width: $_80;
@@ -124,7 +124,7 @@ body {
             color: #303030;
             border: 1px solid #0000000d;
             border-radius: 50%;
-            transition: 0.2s;
+            transition: 0.3s;
 
             @media (hover: hover) {
 
@@ -137,7 +137,7 @@ body {
         i {
             line-height: $_48;
             font-size: $_24;
-            transition: 0.2s;
+            transition: 0.3s;
         }
     }
 
@@ -149,7 +149,7 @@ body {
         align-items: center;
         gap: $_24;
         width: 100%;
-        transition: 0.2s;
+        transition: 0.3s;
 
         margin-left: 0;
         padding: $_128 $_16 0;
@@ -212,6 +212,11 @@ body {
                     letter-spacing: $_2;
                     filter: drop-shadow(2px 0.5px 0 #000);
                     -webkit-filter: drop-shadow(2px 0.5px 0 #000);
+                    text-align: center;
+
+                    @media screen and (min-width: 480px) {
+                        text-align: left;
+                    }
 
                     span {
                         font-size: $_48;
@@ -230,6 +235,11 @@ body {
                     font-size: $_24;
                     font-weight: 500;
                     letter-spacing: 0;
+                    text-align: center;
+
+                    @media screen and (min-width: 480px) {
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -239,7 +249,16 @@ body {
             justify-content: center;
             align-items: center;
             flex-flow: row wrap;
-            gap: $_16;
+            gap: $_8 $_16;
+
+            br {
+                width: 100%;
+            }
+
+            span {
+                display: block;
+                width: 100%;
+            }
 
             a {
                 display: flex;
@@ -253,7 +272,7 @@ body {
                 border: 1px solid #00000034;
                 border-radius: $_8;
                 letter-spacing: 1px;
-                transition: 0.2s;
+                transition: 0.3s;
 
                 &:nth-child(1) {
                     color: #fff;
@@ -292,14 +311,10 @@ body {
                     }
                 }
 
-                &:nth-child(3) {
-
-                    @media (hover: hover) {
-
-                        &:hover {
-                            border: 1px solid #000;
-                        }
-                    }
+                &:last-child {
+                    // width: 100%;
+                    // justify-content: center;
+                    border: none;
                 }
             }
         }
@@ -359,7 +374,7 @@ body {
                 justify-content: flex-start;
                 align-items: flex-start;
                 padding: $_32 0;
-                transition: 0.2s;
+                transition: 0.3s;
 
                 flex-flow: column;
                 gap: $_32;
@@ -375,6 +390,7 @@ body {
                     height: $_640;
                     border-radius: $_16 0 0 $_16;
                     box-shadow: -2px 0 $_4 #0000000d;
+                    overflow: hidden;
                 }
 
                 &:not(:first-child) {
@@ -420,7 +436,7 @@ body {
                         font-weight: 700;
                         white-space: nowrap;
                         overflow: hidden;
-                        transition: 0.2s;
+                        transition: 0.3s;
                     }
 
                     strong {
@@ -446,6 +462,11 @@ body {
                     height: 0;
                     overflow: scroll;
                     transition: padding 0.3s;
+
+                    @media screen and (min-width: 800px) {
+                        max-height: 100%;
+
+                    }
 
                     * {
                         opacity: 0;
@@ -550,7 +571,7 @@ body {
             width: 100%;
             min-height: calc(100vh - $safeT - $safeB - $_64);
             border-radius: $_16;
-            transition: 0.2s;
+            transition: 0.3s;
 
             border: 0px solid #77777700;
 
@@ -573,7 +594,7 @@ body {
                 border-bottom: 1px solid #303030;
                 background-color: #F5F5F5;
                 border-radius: $_16 $_16 0 0;
-                transition: 0.2s;
+                transition: 0.3s;
 
                 flex-flow: row;
                 top: calc($_64 - 4px);
@@ -618,7 +639,7 @@ body {
                 button {
                     line-height: $_40;
                     border-radius: $_8;
-                    transition: 0.2s;
+                    transition: 0.3s;
                 }
             }
 
@@ -656,5 +677,23 @@ body {
                 color: #000;
             }
         }
+    }
+
+    >a.lang {
+        position: fixed;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0 1rem;
+        line-height: 2.5rem;
+        text-decoration: none;
+        color: #000;
+        background-color: #ffffffcc;
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 8px #0000001a;
     }
 }

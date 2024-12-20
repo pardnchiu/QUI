@@ -1,6 +1,4 @@
-## 文字替換
-
-### `{{value}}`
+## `{{value}}`
 
 - index.html
     ```HTML
@@ -21,9 +19,7 @@
     </body>
     ```
 
-***
-
-### `:html`
+## `:html`
 
 - index.html
     ```HTML

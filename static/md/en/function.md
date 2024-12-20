@@ -1,6 +1,4 @@
-## 可用函式
-
-### `LENGTH()`
+## `LENGTH()`
 
 - index.html
     ```HTML
@@ -25,7 +23,7 @@
 
 ***
 
-### `CALC()`
+## `CALC()`
 
 - index.html
     ```HTML
@@ -50,7 +48,7 @@
 
 ***
 
-### `UPPER()` / `LOWER()`
+## `UPPER()` / `LOWER()`
 
 - index.html
     ```HTML
@@ -76,7 +74,7 @@
 
 ***
 
-### `DATE(num, format)`
+## `DATE(num, format)`
 
 - index.html
     ```HTML

@@ -1,9 +1,7 @@
-## 插入區塊
-
 > [!NOTE]
-> 確保測試時已禁用瀏覽器中的本地文件限制或使用實時服務器。
+> Ensure to disable local file restrictions in your browser or use a live server when testing.
 
-### `:path`
+## `:path`
 
 - test.html
     ```html
@@ -24,7 +22,7 @@
 - Result
     ```html
     <body id="app">
-        <!-- 直接插入 PATH 內容 -->
+        <!-- Directly inserted PATH content -->
         <h1>path heading</h1>
         <p>path content</p>
     </body>

@@ -1,6 +1,4 @@
-## 迴圈渲染
-
-### `:for`
+## `:for`
 
 - index.html
     ```html
@@ -29,7 +27,7 @@
 
 ***
 
-### 巢狀迴圈
+## Nest loop
 
 - index.html
     ```html

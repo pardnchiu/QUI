@@ -1,5 +1,3 @@
-## 條件渲染
-
 - index.html
     ```html
     <body id="app">
