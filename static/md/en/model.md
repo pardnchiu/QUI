@@ -1,3 +1,5 @@
+## Model Rendering
+
 - index.html
     ```HTML
     <body id="app"></body>

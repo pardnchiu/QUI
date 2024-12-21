@@ -1,3 +1,5 @@
+## Data Binding
+
 ```html
 <body id="app">
     <input type="password" :model="password">

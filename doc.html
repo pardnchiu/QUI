@@ -123,6 +123,7 @@
                     ],
                     "email": "dev@pardn.io"
                 },
+                "image": "https://quickui.pardn.io/static/image/website.jpg",
                 "mainEntity": [
                     {
                         "@type": "WebPageElement",
@@ -418,6 +419,7 @@
     </head>
 
     <body id="app" :animation="fade-in">
+        <!--  -->
         <section class="left" data-index="1">
             <a :href="./index.html?lang={{ lang }}">
                 <i class="fa-solid fa-house"></i>
@@ -433,7 +435,9 @@
                 <strong>QuickUI</strong>
             </a>
         </section>
+        <!--  -->
         <section class="right">
+            <!--  -->
             <section class="doc">
                 <section class="tab" data-index="">
                     <button @click="changeContent" data-title="installation">{{ i18n.installation }}</button>
@@ -458,10 +462,12 @@
             <!--  -->
             <footer>
                 <p>Created by <a href="https://github.com/pardnchiu" target="_blank">邱敬幃</a></p>
-                <p><a href="https://github.com/pardnchiu/QuickUI" target="_blank">QuickUI on GitHub</a></p>
+                <p><a href="https://github.com/pardnchiu/QuickUI" target="_blank">QuickUI</a> on GitHub</p>
+                <p>Render by <a href="https://nanomd.pardn.io" target="_blank">NanoMD</a></p>
                 <p>&copy; 2024</p>
             </footer>
         </section>
+        <!--  -->
         <a :href="./doc.html?lang={{ change }}" class="lang">
             <i class="fa-solid fa-globe"></i>
             <span>{{ change }}</span>
@@ -516,7 +522,6 @@
                                 });
 
                             url.searchParams.set("tag", title);
-
                             window.history.replaceState({}, document.title, url.href);
 
                             editor.init(pre);
@@ -557,9 +562,6 @@
 
                             const target = document.querySelector("button[data-title='" + tag + "']");
                             target.click();
-                            // const tab = document.getElementById("doc-body-tab");
-                            // const index = tab.dataset.index = parseInt(0);
-                            // tab.children[index].click();
                         }
                     }
                 })

@@ -1,3 +1,5 @@
+## Lifecycle
+
 ```html
 <body id="app"></body>
 <script>

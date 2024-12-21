@@ -1,3 +1,5 @@
+## 雙向綁定
+
 ```html
 <body id="app">
     <input type="password" :model="password">

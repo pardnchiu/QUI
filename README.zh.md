@@ -1,8 +1,11 @@
-<img src="./dist/logo.png" width=80>
+<img src="https://quickui.pardn.io/static/image/logo.png" width=80>
 
-# QuickUI
+# QuickUI: 輕量化前端框架
 
-*(原名：PDQuickUI，自 `0.6.0` 版本起更名為 QuickUI)*
+> [!NOTE]
+> (原名：PDQuickUI，自 `0.6.0` 版本起更名為 QuickUI)
+
+> QuickUI 是一個純 JavaScript 開發的前端渲染框架。通過整合虛擬 DOM 技術提升渲染效能，實現快速的數據響應和自動更新。
 
 ![tag](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
 ![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js)<br>
@@ -11,13 +14,7 @@
 [![jsdeliver](https://img.shields.io/jsdelivr/npm/hm/@pardnchiu/quickui)](https://www.jsdelivr.com/package/npm/@pardnchiu/quickui)<br>
 [![](https://img.shields.io/badge/read-English%20Version-ffffff)](https://github.com/pardnchiu/QuickUI/blob/main/README.en.md)
 
-`QuickUI` 是從 [PDRenderKit](https://github.com/pardnchiu/PDRenderKit) 中獨立出來的前端渲染框架，專注於強化前端框架功能。<br>
-透過引入虛擬 DOM 概念重寫渲染邏輯，提升渲染效能，並實現更高效的數據監聽和自動更新。<br>
-
-本專案移除了 `PDRenderKit` 中針對 `prototype` 的擴展，確保兼容性與效能，適合用於複雜的應用場景。<br>
-提供 `module` 和非 `module` 版本。
-
-## 特點
+## 核心特色
 
 ### 高效虛擬 DOM
 - 透過精準的差異比對算法實現高效 DOM 更新
@@ -41,6 +38,11 @@
 - 極小的檔案體積且無外部依賴
 - 智慧事件委派和資源清理機制，優化記憶體使用
 
+## 文件
+
+- 網站: [nanomd.pardn.io](https://nanomd.pardn.io)
+- 說明文件: [nanomd.pardn.io/doc.html](https://nanomd.pardn.io/doc.html)
+
 ## 安裝方式
 
 ### 從 npm 安裝
@@ -52,19 +54,19 @@ npm i @pardnchiu/quickui
 
 #### 引入 `QuickUI` 套件
 ```html
-<!-- Version 0.6.0 and above -->
+<!-- 0.6.0 版本以上 -->
 <script src="https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@[VERSION]/dist/QuickUI.js"></script>
 
-<!-- Version 0.5.4 and below -->
+<!-- 0.5.4 版本以下 -->
 <script src="https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.js"></script>
 ```
 
 #### Module 版本
 ```javascript
-// Version 0.6.0 and above
+// 0.6.0 版本以上
 import { QUI } from "https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@[VERSION]/dist/QuickUI.esm.js";
 
-// Version 0.5.4 and below
+// 0.5.4 版本以下
 import { QUI } from "https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.module.js";
 ```
         
@@ -160,11 +162,15 @@ const app = new QUI({
 
 ## 開發者
 
-<img src="https://avatars.githubusercontent.com/u/25631760" align="left" width="96" height="96" style="margin-right: 0.5rem;" />
+<img src="https://avatars.githubusercontent.com/u/25631760" align="left" width="96" height="96" style="margin-right: 0.5rem;">
 
 <h4 style="padding-top: 0">邱敬幃 Pardn Chiu</h4>
 
-[![](https://skillicons.dev/icons?i=linkedin)](https://linkedin.com/in/pardnchiu)
+<a href="mailto:dev@pardn.io" target="_blank">
+    <img src="https://pardn.io/image/email.svg" width="48" height="48">
+</a> <a href="https://linkedin.com/in/pardnchiu" target="_blank">
+    <img src="https://pardn.io/image/linkedin.svg" width="48" height="48">
+</a>
 
 ***
 

@@ -1,4 +1,6 @@
-## `:for`
+## Loop Rendering
+
+### `:for`
 
 - index.html
     ```html
@@ -27,7 +29,7 @@
 
 ***
 
-## Nest loop
+### Nest loop
 
 - index.html
     ```html

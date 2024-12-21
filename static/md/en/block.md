@@ -1,7 +1,9 @@
+## Insert Block
+
 > [!NOTE]
 > Ensure to disable local file restrictions in your browser or use a live server when testing.
 
-## `:path`
+### `:path`
 
 - test.html
     ```html

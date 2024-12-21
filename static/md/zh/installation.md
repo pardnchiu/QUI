@@ -1,3 +1,6 @@
+> 此專案版本 `0.6.0` 開始，從 `PDQuickUI` 改名為 `QuickUI`<br>
+> 功能不變，名稱更加精簡好記。
+
 ## 從 npm 安裝
 ```bash
 npm i @pardnchiu/quickui
@@ -8,20 +11,20 @@ npm i @pardnchiu/quickui
 ### 引入 `QuickUI` 套件
 
 ```html
-<!-- Version 0.6.0 and above -->
+<!-- 0.6.0 版本以上 -->
 <script src="https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@[VERSION]/dist/QuickUI.js"></script>
 
-<!-- Version 0.5.4 and below -->
+<!-- 0.5.4 版本以下 -->
 <script src="https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.js"></script>
 ```
 
 ### Module 版本
 
 ```javascript
-// Version 0.6.0 and above
+// 0.6.0 版本以上
 import { QUI } from "https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@[VERSION]/dist/QuickUI.esm.js";
 
-// Version 0.5.4 and below
+// 0.5.4 版本以下
 import { QUI } from "https://cdn.jsdelivr.net/npm/pdquickui@[VERSION]/dist/PDQuickUI.module.js";
 ```
 

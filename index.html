@@ -126,6 +126,7 @@
     </head>
 
     <body id="app" :animation="fade-in">
+        <!--  -->
         <section class="left" data-index="0">
             <a :href="./index.html?lang={{ lang }}">
                 <i class="fa-solid fa-house"></i>
@@ -137,7 +138,9 @@
                 <i class="fa-solid fa-code-branch"></i>
             </a>
         </section>
+        <!--  -->
         <section class="right">
+            <!--  -->
             <section class="logo">
                 <img src="./static/image/logo.svg" alt="">
                 <section>
@@ -145,6 +148,7 @@
                     <span>{{ i18n.title }}</span>
                 </section>
             </section>
+            <!--  -->
             <section class="button">
                 <a href="https://github.com/pardnchiu/QuickUI" title="GitHub" target="_blank">
                     <i class="fa-brands fa-github"></i>
@@ -160,6 +164,7 @@
                     LICENSE
                 </a>
             </section>
+            <!--  -->
             <section class="intro" data-index="0">
                 <div>
                     <button @click="changeIntro">
@@ -202,7 +207,7 @@
                     </section>
                 </div>
             </section>
-
+            <!--  -->
             <section class="block">
                 <h2>{{ i18n.feature }}</h2>
                 <div>
@@ -233,7 +238,7 @@
             <!--  -->
             <footer>
                 <p>Created by <a href="https://github.com/pardnchiu" target="_blank">邱敬幃</a></p>
-                <p><a href="https://github.com/pardnchiu/QuickUI" target="_blank">QuickUI on GitHub</a></p>
+                <p><a href="https://github.com/pardnchiu/QuickUI" target="_blank">QuickUI</a> on GitHub</p>
                 <p>&copy; 2024</p>
             </footer>
         </section>
@@ -245,6 +250,7 @@
             document.addEventListener("DOMContentLoaded", _ => {
                 const url = new URL(location.href);
                 const currentLanguage = navigator.language || navigator.userLanguage;
+
                 let lang = url.searchParams.get("lang");
                 let isZh = /^zh/i.test(currentLanguage);
 
@@ -270,8 +276,6 @@
                             const _this = e.target;
                             const parent = _this.parentElement.parentElement;
                             const index = Array.prototype.indexOf.call(parent.children, _this.parentElement);
-
-                            console.log(index)
 
                             parent.dataset.index = index;
                         }

@@ -1,4 +1,6 @@
-## `{{value}}`
+## 文字替換
+
+### `{{value}}`
 
 - index.html
     ```HTML
@@ -21,7 +23,7 @@
 
 ***
 
-## `:html`
+### `:html`
 
 - index.html
     ```HTML

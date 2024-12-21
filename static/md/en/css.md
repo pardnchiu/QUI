@@ -1,3 +1,5 @@
+## CSS Settings
+
 > [!NOTE]
 > Supports simple settings using `:[CSS property]`, directly binding data to style attributes.
 

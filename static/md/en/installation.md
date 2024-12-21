@@ -1,3 +1,6 @@
+> Starting from version `0.6.0`, `PDQuickUI` has been renamed to `QuickUI`<br>
+> The functionality remains the same, but with a more concise and memorable name.
+
 ## Install from npm
 
 ```bash

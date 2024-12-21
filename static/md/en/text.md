@@ -1,4 +1,6 @@
-## `{{value}}`
+## Text Replacement
+
+### `{{value}}`
 
 - index.html
     ```HTML
@@ -19,7 +21,7 @@
     </body>
     ```
 
-## `:html`
+### `:html`
 
 - index.html
     ```HTML
