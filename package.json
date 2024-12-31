@@ -1,7 +1,7 @@
 {
     "name": "@pardnchiu/quickui",
-    "version": "0.6.3",
-    "description": "A web frontend framework that supports conditional and loop rendering, data binding, monitoring data changes, and automatic rendering. Previously known as QuickUI.",
+    "version": "0.6.4",
+    "description": "QuickUI is a lightweight frontend framework built on pure JavaScript and native APIs. Supports data binding, i18n support, event binding, conditional rendering, and loop rendering.",
     "main": "dist/QuickUI.js",
     "module": "dist/QuickUI.esm.js",
     "types": "src/interface.ts",
@@ -30,6 +30,8 @@
         "virtual-DOM",
         "loop-rendering",
         "conditional-rendering",
+        "pure-javascript",
+        "native-api",
         "邱敬幃",
         "pardnchiu"
     ],

@@ -5,7 +5,7 @@
 > [!NOTE]
 > (原名：PDQuickUI，自 `0.6.0` 版本起更名為 QuickUI)
 
-> QuickUI 是一個純 JavaScript 開發的前端渲染框架。通過整合虛擬 DOM 技術提升渲染效能，實現快速的數據響應和自動更新。
+> QuickUI 是一個基於純 JavaScript 和原生 API 的輕量級前端框架，支持數據綁定、國際化 (i18n)、事件綁定、條件渲染以及循環渲染功能。
 
 ![tag](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
 ![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js)<br>
@@ -40,8 +40,8 @@
 
 ## 文件
 
-- 網站: [nanomd.pardn.io](https://nanomd.pardn.io)
-- 說明文件: [nanomd.pardn.io/doc.html](https://nanomd.pardn.io/doc.html)
+- 網站: [quickui.pardn.io](https://quickui.pardn.io/)
+- 說明文件: [quickui.pardn.io/page/doc.html](https://quickui.pardn.io/page/doc.html)
 
 ## 安裝方式
 

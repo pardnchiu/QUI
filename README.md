@@ -5,7 +5,7 @@
 > [!NOTE]
 > (Formerly known as PDQuickUI, renamed to QuickUI starting from version `0.6.0`)
 
-> QuickUI is a front-end rendering framework built with pure JavaScript. By integrating virtual DOM technology, it enhances rendering performance, achieving rapid data responsiveness and automatic updates.
+> QuickUI is a lightweight frontend framework built on pure JavaScript and native APIs. Supports data binding, i18n support, event binding, conditional rendering, and loop rendering.
 
 ![tag](https://img.shields.io/badge/tag-JavaScript%20Library-bb4444) 
 ![size](https://img.shields.io/github/size/pardnchiu/QuickUI/dist%2FQuickUI.js)<br>
@@ -40,13 +40,13 @@
 
 ## Documentation
 
-- Website: [quickui.pardn.io](https://quickui.pardn.io)
-- Documentation: [quickui.pardn.io/doc.html](https://quickui.pardn.io/doc.html)
+- Website: [quickui.pardn.io](https://quickui.pardn.io/)
+- Documentation: [quickui.pardn.io/doc.html](https://quickui.pardn.io/page/doc.html)
 
 ## Installation
 
 ### Install via npm
-```bash
+```shell
 npm i @pardnchiu/quickui
 ```
 

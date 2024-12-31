@@ -70,8 +70,8 @@
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@pardnchiu/nanomd@latest/dist/NanoMD.js" as="script">
 
         <!-- Local Resources -->
-        <link rel="stylesheet" href="./static/css/index.css">
-        <script src="./dist/QuickUI.js"></script>
+        <link rel="stylesheet" href="/static/css/index.css">
+        <script src="/dist/QuickUI.js"></script>
 
         <!-- JSON-LD Schema -->
         <script type="application/ld+json">
@@ -128,10 +128,10 @@
     <body id="app" :animation="fade-in">
         <!--  -->
         <section class="left" data-index="0">
-            <a :href="./index.html?lang={{ lang }}">
+            <a :href="/index.html?lang={{ lang }}">
                 <i class="fa-solid fa-house"></i>
             </a>
-            <a :href="./doc.html?lang={{ lang }}">
+            <a :href="/page/doc.html?lang={{ lang }}">
                 <i class="fa-brands fa-readme"></i>
             </a>
             <a href="https://github.com/pardnchiu/QuickUI/releases" target="_blank">
@@ -142,7 +142,7 @@
         <section class="right">
             <!--  -->
             <section class="logo">
-                <img src="./static/image/logo.svg" alt="">
+                <img src="/static/image/logo.svg" alt="">
                 <section>
                     <h1><span>Quick</span><span>UI</span></h1>
                     <span>{{ i18n.title }}</span>
@@ -159,7 +159,7 @@
                     npm
                 </a>
                 <span></span>
-                <a :href="./agreement.html?lang={{ lang }}">
+                <a :href="/page/agreement.html?lang={{ lang }}">
                     <i class="fa-solid fa-scale-balanced"></i>
                     LICENSE
                 </a>
@@ -242,10 +242,12 @@
                 <p>&copy; 2024</p>
             </footer>
         </section>
-        <a :href="./index.html?lang={{ change }}" class="lang">
+        <!--  -->
+        <a :href="/index.html?lang={{ change }}" class="lang">
             <i class="fa-solid fa-globe"></i>
             <span>{{ change }}</span>
         </a>
+        <!--  -->
         <script>
             document.addEventListener("DOMContentLoaded", _ => {
                 const url = new URL(location.href);
@@ -263,8 +265,8 @@
                 const app = new QUI({
                     id: "app",
                     i18n: {
-                        zh: "./static/i18n/index/zh.json",
-                        en: "./static/i18n/index/en.json",
+                        zh: "/static/i18n/index/zh.json",
+                        en: "/static/i18n/index/en.json",
                     },
                     i18nLang: lang,
                     data: {

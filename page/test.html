@@ -54,8 +54,8 @@
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@pardnchiu/quickui@latest/dist/QuickUI.js" as="script">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@pardnchiu/nanomd@latest/dist/NanoMD.js" as="script">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/pdrenderkit@latest/dist/PDRenderKit.js" as="script">
-        <!-- <script src="./dist/QuickUI.js" copyright="Pardn Ltd"></script> -->
-        <!-- <script src="./src/QuickUI.js" copyright="Pardn Ltd"></script> -->
+        <!-- <script src="/dist/QuickUI.js" copyright="Pardn Ltd"></script> -->
+        <!-- <script src="/src/QuickUI.js" copyright="Pardn Ltd"></script> -->
 
         <!-- 資源預載: https://pardnchiu.github.io -->
         <!-- <link rel="preconnect" href="https://pardnchiu.github.io"> -->
@@ -63,8 +63,8 @@
         <!-- <link rel="stylesheet" href="https://pardnchiu.github.io/css/index.css"> -->
 
         <!-- 本地資源 -->
-        <!-- <script type="module" src="./static/js/index.js"></script> -->
-        <script src="./dist/QuickUI.js"></script>
+        <!-- <script type="module" src="/static/js/index.js"></script> -->
+        <script src="/dist/QuickUI.js"></script>
     </head>
 
     <body id="app" :effect="fade-in">
@@ -87,11 +87,11 @@
         <br>
         <!-- <p :html="html" :bg-color="#000" :color="#ff0000">adfasdf</p> -->
         <!-- <input type="text" :model="title"> -->
-        <temp :path="./static/path/test.html"></temp>
-        <temp :path="./static/path/test2.html"></temp>
+        <!-- <temp :path="/static/path/test.html"></temp>
+        <temp :path="/static/path/test2.html"></temp> -->
         <strong>以下是SVG轉換</strong>
         <hr>
-        <temp-svg :src="./static/image/404.svg"></temp-svg>
+        <temp-svg :src="/static/image/404.svg"></temp-svg>
         <hr>
         <ul>
             <li :for="(key, val) in obj">
@@ -149,7 +149,7 @@
                 const app = new QUI({
                     id: "app",
                     i18n: {
-                        zh: "./static/zh.json",
+                        zh: "/static/zh.json",
                         en: {
                             greeting: "Hello",
                             user: "User"
