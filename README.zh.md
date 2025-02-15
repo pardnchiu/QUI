@@ -83,19 +83,19 @@ const app = new QUI({
         // 自訂 EVENT
     },
     when: {
-        before_render: function () {
+        beforeRender: function () {
             // 停止渲染
         },
         rendered: function () {
             // 已渲染
         },
-        before_update: function () {
+        beforeUpdate: function () {
             // 停止更新
         },
         updated: function () {
             // 已更新
         },
-        before_destroy: function () {
+        beforeDestroy: function () {
             // 停止銷毀
         },
         destroyed: function () {

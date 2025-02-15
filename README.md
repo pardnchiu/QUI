@@ -83,19 +83,19 @@ const app = new QUI({
         // Custom EVENT
     },
     when: {
-        before_render: function () {
+        beforeRender: function () {
             // Stop rendering
         },
         rendered: function () {
             // Rendered
         },
-        before_update: function () {
+        beforeUpdate: function () {
             // Stop updating
         },
         updated: function () {
             // Updated
         },
-        before_destroy: function () {
+        beforeDestroy: function () {
             // Stop destruction
         },
         destroyed: function () {

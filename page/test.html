@@ -64,10 +64,10 @@
 
         <!-- 本地資源 -->
         <!-- <script type="module" src="/static/js/index.js"></script> -->
-        <script src="/dist/QuickUI.js"></script>
+        <script src="/src/QuickUI.debug.js"></script>
     </head>
 
-    <body id="app" :effect="fade-in">
+    <body id="app">
         <p @click="click">i18n</p>
         <p :test="i18n.greeting">{{ i18n.greeting }}, {{ i18n.user }}: {{ username }}</p>
         <section :html="html"></section>
@@ -126,13 +126,13 @@
         <script>
             document.addEventListener("DOMContentLoaded", () => {
                 let icons = "ableton,activitypub,actix,adonis,ae,aiscript,alpinejs,anaconda,androidstudio,angular,ansible,apollo,apple,appwrite,arch,arduino,astro,atom,au,autocad,aws,azul,azure,babel,bash,bevy,bitbucket,blender,bootstrap,bsd,bun,c,cs,cpp,crystal,cassandra,clion,clojure,cloudflare,cmake,codepen,coffeescript,css,cypress,d3,dart,debian,deno,devto,discord,bots,discordjs,django,docker,dotnet,dynamodb,eclipse,elasticsearch,electron,elixir,elysia,emacs,ember,emotion,express,fastapi,fediverse,figma,firebase,flask,flutter,forth,fortran,gamemakerstudio,gatsby,gcp,git,github,githubactions,gitlab,gmail,gherkin,go,gradle,godot,grafana,graphql,gtk,gulp,haskell,haxe,haxeflixel,heroku,hibernate,html,htmx,idea,ai,instagram,ipfs,java,js,jenkins,jest,jquery,kafka,kali,kotlin,ktor,kubernetes,laravel,latex,less,linkedin,linux,lit,lua,md,mastodon,materialui,matlab,maven,mint,misskey,mongodb,mysql,neovim,nestjs,netlify,nextjs,nginx,nim,nix,nodejs,notion,npm,nuxtjs,obsidian,ocaml,octave,opencv,openshift,openstack,p5js,perl,ps,php,phpstorm,pinia,pkl,plan9,planetscale,pnpm,postgres,postman,powershell,pr,prisma,processing,prometheus,pug,pycharm,py,pytorch,qt,r,rabbitmq,rails,raspberrypi,react,reactivex,redhat,redis,redux,regex,remix,replit,rider,robloxstudio,rocket,rollupjs,ros,ruby,rust,sass,spring,sqlite,stackoverflow,styledcomponents,sublime,supabase,scala,sklearn,selenium,sentry,sequelize,sketchup,solidity,solidjs,svelte,svg,swift,symfony,tailwind,tauri,tensorflow,terraform,threejs,twitter,ts,ubuntu,unity,unreal,v,vala,vercel,vim,visualstudio,vite,vitest,vscode,vscodium,vue,vuetify,wasm,webflow,webpack,webstorm,windicss,windows,wordpress,workers,xd,yarn,yew,zig".split(",");
+
                 const test = new QUI({
                     id: "test",
                     data: {
                         test: "test 123"
                     },
-                    render: () => {
-                        return `
+                    render: _ => `
                         "{{ test }}",
                         div#main-card.primary.highlighted {
                             style: "background: red;", 
@@ -146,7 +146,6 @@
                                 } 
                             ]
                         }`
-                    }
                 })
 
                 const app = new QUI({
@@ -238,7 +237,7 @@
                         }
                     },
                     when: {
-                        before_render: _ => {
+                        beforeRender: _ => {
                             console.log("準備渲染");
                             // return false;
                         },
@@ -271,7 +270,7 @@
                             }, 2000)
                             console.log("已渲染")
                         },
-                        before_update: _ => {
+                        beforeUpdate: _ => {
                             console.log("準備更新")
                             // alert(true)
                             // return false;
@@ -281,6 +280,7 @@
                         }
                     }
                 });
+
             });
         </script>
     </body>

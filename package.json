@@ -1,15 +1,19 @@
 {
     "name": "@pardnchiu/quickui",
-    "version": "0.6.7",
+    "version": "0.6.8",
     "description": "QuickUI is a lightweight frontend framework built on pure JavaScript and native APIs. Supports data binding, i18n support, event binding, conditional rendering, and loop rendering.",
     "main": "dist/QuickUI.js",
     "module": "dist/QuickUI.esm.js",
     "types": "src/interface.ts",
     "scripts": {
-        "minify": "npx terser src/*.js -c -m -o dist/QuickUI.js --config-file terser.config.json --name-cache terser.cache.json && npx terser src/*.js -c -m -o dist/QuickUI.esm.js --config-file terser.config.json --name-cache terser.cache.json && echo 'export const QUI = window.QUI;' >> dist/QuickUI.esm.js",
-        "minify-w": "chokidar 'src/QuickUI.js' -c 'npm run minify'",
-        "sass": "sass src/sass:dist/ -w --style compressed --no-source-map",
-        "sass-index": "sass static/sass/:static/css/ -w --style compressed --no-source-map"
+        "build:debug": "tsc",
+        "build:min": "npx terser src/QuickUI.debug.js -c -m -o dist/QuickUI.js --config-file terser.config.json",
+        "build:esm": "npx terser src/QuickUI.debug.js -c -m -o dist/QuickUI.esm.js --config-file terser.config.json && echo 'export const QUI = window.QUI;' >> dist/QuickUI.esm.js",
+        "build:once": "npm run build:debug && npm-run-all build:min build:esm",
+        "build": "chokidar src/QuickUI.debug.js -c 'npm-run-all build:min build:esm'",
+        "sass:library": "sass src/sass:dist/ -w --style compressed --no-source-map",
+        "sass:index": "sass static/sass/:static/css/ -w --style compressed --no-source-map",
+        "sass": "npm-run-all sass:library sass:index"
     },
     "publishConfig": {
         "access": "public"
