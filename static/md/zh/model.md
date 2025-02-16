@@ -10,16 +10,14 @@
                 hint: "hint 123",
                 title: "test 123"
             },
-            render: () => {
-                return `
-                    "{{ hint }}",
-                    h1 {
-                        style: "background: red;", 
-                        children: [ 
-                            "{{ title }}"
-                        ]
-                    }`
-            }
+            render: () => `
+                "{{ hint }}",
+                h1 {
+                    style: "background: red;", 
+                    children: [ 
+                        "{{ title }}"
+                    ]
+                }`
         })
     </script>
     ```
