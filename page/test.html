@@ -130,22 +130,26 @@
                 const test = new QUI({
                     id: "test",
                     data: {
-                        test: "test 123"
+                        test1: "模板渲染測試1",
+                        test2: "模板渲染測試2",
+                        test3: "模板渲染測試3",
+                    },
+                    event: {
+                        test: e => {
+                            alert("test");
+                        }
                     },
                     render: _ => `
-                        "{{ test }}",
-                        div#main-card.primary.highlighted {
-                            style: "background: red;", 
-                            children: [ 
-                                "test",
-                                header.title { 
-                                    data-role: "title" 
-                                }, 
-                                section.content { 
-                                    style: "padding: 20px;" 
-                                } 
-                            ]
-                        }`
+                    section
+                    "{{ test1 }}"
+                    div#main-card.primary.highlighted (q-title: "test1" 
+                        q-content: "12312312"
+                        qe-click: "test"
+                        style: "background: red;"
+                    ) ["{{ test2 }}"
+                        "<br>"
+                        "{{ test3 }}"
+                    ]`
                 })
 
                 const app = new QUI({

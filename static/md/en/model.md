@@ -2,60 +2,50 @@
 
 - index.html
     ```HTML
-    <body id="app"></body>
-    <script>
-        const test = new QUI({
-            id: "app",
-            data: {
-                hint: "hint 123",
-                title: "test 123"
-            },
-            render: () => `
-                "{{ hint }}",
-                h1 {
-                    style: "background: red;", 
-                    children: [ 
-                        "{{ title }}"
-                    ]
-                }`
-        })
-    </script>
-    ```
-- result
-    ```HTML
-    <body id="app">
-        hint 123
-        <h1 style="background: red;">test 123</h1>
+    <body>
+        <section id="test"></section>
     </body>
-    ```
-
-- index.html
-    ```HTML
-    <body id="app"></body>
     <script>
-        document.addEventListener("DOMContentLoaded", async _ => {
+        document.addEventListener("DOMContentLoaded", async () => {
             const test = await new QUI({
+                // id: "test"
                 data: {
-                    hint: "hint 123",
-                    title: "test 123"
+                    test1: "text test 1",
+                    test2: "text test 2",
+                    test3: "text test 3",
                 },
-                render: () => `
-                    "{{ hint }}",
-                    h1 {
-                        style: "background: red;", 
-                        children: [ 
-                            "{{ title }}"
-                        ]
-                    }`
+                event: {
+                    test: e => {
+                        alert("test");
+                    }
+                },
+                render: _ => `
+                    section
+                    "{{ test1 }}"
+                    div#main-card.primary.highlighted (q-title: "test1" 
+                        q-content: "12312312"
+                        qe-click: "test"
+                        style: "background: red;"
+                    ) ["{{ test2 }}"
+                        "<br>"
+                        "{{ test3 }}"
+                    ]`
             }).fragment();
-            document.getElementById("app").appendChild(test);
+
+            document.getElementById("test").appendChild(test)
+
         });
     </script>
     ```
 - result
     ```HTML
-    <body id="app">
-        hint 123
-        <h1 style="background: red;">test 123</h1>
+    <body>
+        <section id="test">
+            <section></section>
+            text test 1
+            <div id="main-card" class="primary highlighted" style="background: red;" title="text test 1" content="12312312">
+            text test 2<br>text test 3
+            </div>
+        </section>
     </body>
     ```
